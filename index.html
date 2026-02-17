@@ -115,14 +115,57 @@
           >
             <span id="currencyLabel">USD $</span>
             <div class="currency-dropdown" id="currencyDropdown">
-              <button class="currency-option active" data-currency="USD" data-symbol="$" data-rate="1">USD $</button>
-              <button class="currency-option" data-currency="EUR" data-symbol="€" data-rate="0.92">EUR €</button>
-              <button class="currency-option" data-currency="GBP" data-symbol="£" data-rate="0.79">GBP £</button>
-              <button class="currency-option" data-currency="BDT" data-symbol="৳" data-rate="110">BDT ৳</button>
-              <button class="currency-option" data-currency="INR" data-symbol="₹" data-rate="83">INR ₹</button>
-              <button class="currency-option" data-currency="JPY" data-symbol="¥" data-rate="150">JPY ¥</button>
+              <button
+                class="currency-option active"
+                data-currency="USD"
+                data-symbol="$"
+                data-rate="1"
+              >
+                USD $
+              </button>
+              <button
+                class="currency-option"
+                data-currency="EUR"
+                data-symbol="€"
+                data-rate="0.92"
+              >
+                EUR €
+              </button>
+              <button
+                class="currency-option"
+                data-currency="GBP"
+                data-symbol="£"
+                data-rate="0.79"
+              >
+                GBP £
+              </button>
+              <button
+                class="currency-option"
+                data-currency="BDT"
+                data-symbol="৳"
+                data-rate="110"
+              >
+                BDT ৳
+              </button>
+              <button
+                class="currency-option"
+                data-currency="INR"
+                data-symbol="₹"
+                data-rate="83"
+              >
+                INR ₹
+              </button>
+              <button
+                class="currency-option"
+                data-currency="JPY"
+                data-symbol="¥"
+                data-rate="150"
+              >
+                JPY ¥
+              </button>
             </div>
           </button>
+          <div class="notification-center" style="position: relative">
           <button
             class="nav-action-btn"
             id="notificationBell"
@@ -130,15 +173,39 @@
             title="Notifications"
           >
             <i class="fa-solid fa-bell"></i>
-            <span class="action-badge notification-badge" id="notifCount">3</span>
+            <span class="action-badge notification-badge" id="notifCount"
+              >3</span
+            >
           </button>
           <div class="notification-dropdown" id="notifDropdown">
-            <div class="notif-header"><h4>Notifications</h4><button id="clearNotifs">Clear all</button></div>
-            <div class="notif-list" id="notifList">
-              <div class="notif-item unread"><i class="fa-solid fa-gift"></i><div><p>Welcome! Use code <strong>SWIFT20</strong> for 20% off</p><small>Just now</small></div></div>
-              <div class="notif-item unread"><i class="fa-solid fa-truck-fast"></i><div><p>Free shipping on orders over $50!</p><small>2 min ago</small></div></div>
-              <div class="notif-item unread"><i class="fa-solid fa-fire"></i><div><p>Flash Sale is LIVE! Save up to 40%</p><small>5 min ago</small></div></div>
+            <div class="notif-header">
+              <h4>Notifications</h4>
+              <button id="clearNotifs">Clear all</button>
             </div>
+            <div class="notif-list" id="notifList">
+              <div class="notif-item unread">
+                <i class="fa-solid fa-gift"></i>
+                <div>
+                  <p>Welcome! Use code <strong>SWIFT20</strong> for 20% off</p>
+                  <small>Just now</small>
+                </div>
+              </div>
+              <div class="notif-item unread">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div>
+                  <p>Free shipping on orders over $50!</p>
+                  <small>2 min ago</small>
+                </div>
+              </div>
+              <div class="notif-item unread">
+                <i class="fa-solid fa-fire"></i>
+                <div>
+                  <p>Flash Sale is LIVE! Save up to 40%</p>
+                  <small>5 min ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
           <button
             class="nav-action-btn loyalty-btn"
@@ -293,7 +360,9 @@
     <section class="category-showcase" id="categoryShowcase">
       <div class="container">
         <h2 class="section-title">Shop by Category</h2>
-        <p class="section-subtitle">Explore our diverse collection across all categories</p>
+        <p class="section-subtitle">
+          Explore our diverse collection across all categories
+        </p>
         <div class="category-showcase-grid">
           <div class="cat-card" data-category="electronics">
             <div class="cat-card-icon"><i class="fa-solid fa-laptop"></i></div>
@@ -305,13 +374,19 @@
             <div class="cat-card-icon"><i class="fa-solid fa-shirt"></i></div>
             <h3>Men's Fashion</h3>
             <p>Styles for every man</p>
-            <span class="cat-card-count" data-cat="men's clothing">0 items</span>
+            <span class="cat-card-count" data-cat="men's clothing"
+              >0 items</span
+            >
           </div>
           <div class="cat-card" data-category="women's clothing">
-            <div class="cat-card-icon"><i class="fa-solid fa-person-dress"></i></div>
+            <div class="cat-card-icon">
+              <i class="fa-solid fa-person-dress"></i>
+            </div>
             <h3>Women's Fashion</h3>
             <p>Trending styles & more</p>
-            <span class="cat-card-count" data-cat="women's clothing">0 items</span>
+            <span class="cat-card-count" data-cat="women's clothing"
+              >0 items</span
+            >
           </div>
           <div class="cat-card" data-category="jewelery">
             <div class="cat-card-icon"><i class="fa-solid fa-gem"></i></div>
@@ -320,7 +395,9 @@
             <span class="cat-card-count" data-cat="jewelery">0 items</span>
           </div>
           <div class="cat-card" data-category="shoes">
-            <div class="cat-card-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+            <div class="cat-card-icon">
+              <i class="fa-solid fa-shoe-prints"></i>
+            </div>
             <h3>Shoes</h3>
             <p>Step up your game</p>
             <span class="cat-card-count" data-cat="shoes">0 items</span>
@@ -332,16 +409,22 @@
             <span class="cat-card-count" data-cat="books">0 items</span>
           </div>
           <div class="cat-card" data-category="sports & outdoors">
-            <div class="cat-card-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="cat-card-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
             <h3>Sports</h3>
             <p>Gear up for adventure</p>
-            <span class="cat-card-count" data-cat="sports & outdoors">0 items</span>
+            <span class="cat-card-count" data-cat="sports & outdoors"
+              >0 items</span
+            >
           </div>
           <div class="cat-card" data-category="home & kitchen">
             <div class="cat-card-icon"><i class="fa-solid fa-house"></i></div>
             <h3>Home & Kitchen</h3>
             <p>Smart home essentials</p>
-            <span class="cat-card-count" data-cat="home & kitchen">0 items</span>
+            <span class="cat-card-count" data-cat="home & kitchen"
+              >0 items</span
+            >
           </div>
           <div class="cat-card" data-category="beauty">
             <div class="cat-card-icon"><i class="fa-solid fa-spa"></i></div>
@@ -350,7 +433,9 @@
             <span class="cat-card-count" data-cat="beauty">0 items</span>
           </div>
           <div class="cat-card" data-category="toys & games">
-            <div class="cat-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div class="cat-card-icon">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
             <h3>Toys & Games</h3>
             <p>Fun for all ages</p>
             <span class="cat-card-count" data-cat="toys & games">0 items</span>
@@ -365,7 +450,9 @@
             <div class="cat-card-icon"><i class="fa-solid fa-mug-hot"></i></div>
             <h3>Grocery</h3>
             <p>Gourmet delights</p>
-            <span class="cat-card-count" data-cat="grocery & gourmet">0 items</span>
+            <span class="cat-card-count" data-cat="grocery & gourmet"
+              >0 items</span
+            >
           </div>
         </div>
       </div>
@@ -754,6 +841,27 @@
       </div>
     </section>
 
+    <!-- ========== GIFT CARD BANNER ========== -->
+    <section class="gift-card-section">
+      <div class="container">
+        <div class="gift-card-banner">
+          <div class="gift-card-content">
+            <div class="gift-icon"><i class="fa-solid fa-gift"></i></div>
+            <div>
+              <h3>Gift Cards Available</h3>
+              <p>
+                The perfect gift for everyone. Available in $25, $50, $100, and
+                $200 denominations.
+              </p>
+            </div>
+          </div>
+          <button class="btn-primary gift-card-btn" id="buyGiftCard">
+            <i class="fa-solid fa-shopping-bag"></i> Buy Gift Card
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
       <div class="container">
@@ -862,31 +970,69 @@
               <i class="fa-solid fa-circle-check"></i> In Stock
             </p>
             <div class="modal-tabs">
-              <button class="modal-tab active" data-tab="description">Description</button>
+              <button class="modal-tab active" data-tab="description">
+                Description
+              </button>
               <button class="modal-tab" data-tab="specs">Specifications</button>
-              <button class="modal-tab" data-tab="shipping-info">Shipping</button>
+              <button class="modal-tab" data-tab="shipping-info">
+                Shipping
+              </button>
             </div>
             <div class="modal-tab-content active" id="tabDescription">
               <p class="modal-description" id="modalDescription"></p>
             </div>
             <div class="modal-tab-content" id="tabSpecs">
               <ul class="specs-list" id="modalSpecs">
-                <li><strong>Brand:</strong> <span id="specBrand">SwiftCart</span></li>
-                <li><strong>Material:</strong> <span id="specMaterial">Premium Quality</span></li>
-                <li><strong>Weight:</strong> <span id="specWeight">0.5 kg</span></li>
-                <li><strong>Warranty:</strong> <span id="specWarranty">1 Year</span></li>
-                <li><strong>Origin:</strong> <span id="specOrigin">Imported</span></li>
+                <li>
+                  <strong>Brand:</strong> <span id="specBrand">SwiftCart</span>
+                </li>
+                <li>
+                  <strong>Material:</strong>
+                  <span id="specMaterial">Premium Quality</span>
+                </li>
+                <li>
+                  <strong>Weight:</strong> <span id="specWeight">0.5 kg</span>
+                </li>
+                <li>
+                  <strong>Warranty:</strong>
+                  <span id="specWarranty">1 Year</span>
+                </li>
+                <li>
+                  <strong>Origin:</strong> <span id="specOrigin">Imported</span>
+                </li>
               </ul>
             </div>
             <div class="modal-tab-content" id="tabShippingInfo">
               <div class="shipping-info-list">
-                <div class="ship-info-item"><i class="fa-solid fa-truck-fast"></i><div><strong>Standard Delivery</strong><p>5-7 business days — Free over $50</p></div></div>
-                <div class="ship-info-item"><i class="fa-solid fa-bolt"></i><div><strong>Express Delivery</strong><p>2-3 business days — $9.99</p></div></div>
-                <div class="ship-info-item"><i class="fa-solid fa-rotate-left"></i><div><strong>Easy Returns</strong><p>30-day money back guarantee</p></div></div>
+                <div class="ship-info-item">
+                  <i class="fa-solid fa-truck-fast"></i>
+                  <div>
+                    <strong>Standard Delivery</strong>
+                    <p>5-7 business days — Free over $50</p>
+                  </div>
+                </div>
+                <div class="ship-info-item">
+                  <i class="fa-solid fa-bolt"></i>
+                  <div>
+                    <strong>Express Delivery</strong>
+                    <p>2-3 business days — $9.99</p>
+                  </div>
+                </div>
+                <div class="ship-info-item">
+                  <i class="fa-solid fa-rotate-left"></i>
+                  <div>
+                    <strong>Easy Returns</strong>
+                    <p>30-day money back guarantee</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-selectors">
-              <div class="size-selector" id="sizeSelector" style="display:none">
+              <div
+                class="size-selector"
+                id="sizeSelector"
+                style="display: none"
+              >
                 <label>Size:</label>
                 <div class="size-options" id="sizeOptions">
                   <button class="size-btn" data-size="XS">XS</button>
@@ -897,14 +1043,38 @@
                   <button class="size-btn" data-size="XXL">XXL</button>
                 </div>
               </div>
-              <div class="color-selector" id="colorSelector" style="display:none">
+              <div
+                class="color-selector"
+                id="colorSelector"
+                style="display: none"
+              >
                 <label>Color:</label>
                 <div class="color-options" id="colorOptions">
-                  <button class="color-btn active" data-color="Black" style="background:#222"></button>
-                  <button class="color-btn" data-color="White" style="background:#fff"></button>
-                  <button class="color-btn" data-color="Navy" style="background:#1a237e"></button>
-                  <button class="color-btn" data-color="Red" style="background:#d32f2f"></button>
-                  <button class="color-btn" data-color="Green" style="background:#2e7d32"></button>
+                  <button
+                    class="color-btn active"
+                    data-color="Black"
+                    style="background: #222"
+                  ></button>
+                  <button
+                    class="color-btn"
+                    data-color="White"
+                    style="background: #fff"
+                  ></button>
+                  <button
+                    class="color-btn"
+                    data-color="Navy"
+                    style="background: #1a237e"
+                  ></button>
+                  <button
+                    class="color-btn"
+                    data-color="Red"
+                    style="background: #d32f2f"
+                  ></button>
+                  <button
+                    class="color-btn"
+                    data-color="Green"
+                    style="background: #2e7d32"
+                  ></button>
                 </div>
                 <span class="selected-color" id="selectedColor">Black</span>
               </div>
@@ -984,9 +1154,17 @@
         </div>
         <div class="free-shipping-bar" id="freeShippingBar">
           <div class="shipping-progress">
-            <div class="shipping-progress-fill" id="shippingProgressFill" style="width: 0%"></div>
+            <div
+              class="shipping-progress-fill"
+              id="shippingProgressFill"
+              style="width: 0%"
+            ></div>
           </div>
-          <p class="shipping-message" id="shippingMessage">Add <strong>$50.00</strong> more for <span class="free-ship-highlight">FREE SHIPPING</span> <i class="fa-solid fa-truck"></i></p>
+          <p class="shipping-message" id="shippingMessage">
+            Add <strong>$50.00</strong> more for
+            <span class="free-ship-highlight">FREE SHIPPING</span>
+            <i class="fa-solid fa-truck"></i>
+          </p>
         </div>
         <div class="cart-coupon">
           <input
@@ -1506,22 +1684,6 @@
       </div>
     </div>
 
-    <!-- ========== GIFT CARD BANNER ========== -->
-    <section class="gift-card-section">
-      <div class="container">
-        <div class="gift-card-banner">
-          <div class="gift-card-content">
-            <div class="gift-icon"><i class="fa-solid fa-gift"></i></div>
-            <div>
-              <h3>Gift Cards Available</h3>
-              <p>The perfect gift for everyone. Available in $25, $50, $100, and $200 denominations.</p>
-            </div>
-          </div>
-          <button class="btn-primary gift-card-btn" id="buyGiftCard"><i class="fa-solid fa-shopping-bag"></i> Buy Gift Card</button>
-        </div>
-      </div>
-    </section>
-
     <!-- ========== SOCIAL PROOF POPUP ========== -->
     <div class="social-proof-popup" id="socialProofPopup">
       <button class="social-proof-close" id="socialProofClose">&times;</button>
@@ -1548,26 +1710,51 @@
             <div class="chat-avatar"><i class="fa-solid fa-headset"></i></div>
             <div>
               <h4>SwiftCart Support</h4>
-              <span class="chat-status"><i class="fa-solid fa-circle"></i> Online</span>
+              <span class="chat-status"
+                ><i class="fa-solid fa-circle"></i> Online</span
+              >
             </div>
           </div>
           <button class="chat-minimize" id="chatMinimize">&times;</button>
         </div>
         <div class="chat-messages" id="chatMessages">
           <div class="chat-msg bot">
-            <div class="chat-msg-bubble">Hi! 👋 Welcome to SwiftCart! How can I help you today?</div>
+            <div class="chat-msg-bubble">
+              Hi! 👋 Welcome to SwiftCart! How can I help you today?
+            </div>
             <small>SwiftCart Bot • Just now</small>
           </div>
         </div>
         <div class="chat-quick-replies" id="chatQuickReplies">
-          <button class="quick-reply" data-msg="Track my order">📦 Track Order</button>
-          <button class="quick-reply" data-msg="I need help with returns">🔄 Returns</button>
-          <button class="quick-reply" data-msg="What are your shipping options?">🚚 Shipping</button>
-          <button class="quick-reply" data-msg="I have a question about a product">❓ Product Help</button>
+          <button class="quick-reply" data-msg="Track my order">
+            📦 Track Order
+          </button>
+          <button class="quick-reply" data-msg="I need help with returns">
+            🔄 Returns
+          </button>
+          <button
+            class="quick-reply"
+            data-msg="What are your shipping options?"
+          >
+            🚚 Shipping
+          </button>
+          <button
+            class="quick-reply"
+            data-msg="I have a question about a product"
+          >
+            ❓ Product Help
+          </button>
         </div>
         <div class="chat-input-area">
-          <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off" />
-          <button class="chat-send" id="chatSend"><i class="fa-solid fa-paper-plane"></i></button>
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type a message..."
+            autocomplete="off"
+          />
+          <button class="chat-send" id="chatSend">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -1580,18 +1767,26 @@
         <p>Try your luck for an exclusive discount!</p>
         <div class="wheel-container">
           <div class="wheel" id="spinWheel">
-            <div class="wheel-segment" style="--i:0"><span>5%</span></div>
-            <div class="wheel-segment" style="--i:1"><span>10%</span></div>
-            <div class="wheel-segment" style="--i:2"><span>FREE SHIP</span></div>
-            <div class="wheel-segment" style="--i:3"><span>15%</span></div>
-            <div class="wheel-segment" style="--i:4"><span>$5 OFF</span></div>
-            <div class="wheel-segment" style="--i:5"><span>20%</span></div>
-            <div class="wheel-segment" style="--i:6"><span>TRY AGAIN</span></div>
-            <div class="wheel-segment" style="--i:7"><span>25%</span></div>
+            <div class="wheel-segment" style="--i: 0"><span>5%</span></div>
+            <div class="wheel-segment" style="--i: 1"><span>10%</span></div>
+            <div class="wheel-segment" style="--i: 2">
+              <span>FREE SHIP</span>
+            </div>
+            <div class="wheel-segment" style="--i: 3"><span>15%</span></div>
+            <div class="wheel-segment" style="--i: 4"><span>$5 OFF</span></div>
+            <div class="wheel-segment" style="--i: 5"><span>20%</span></div>
+            <div class="wheel-segment" style="--i: 6">
+              <span>TRY AGAIN</span>
+            </div>
+            <div class="wheel-segment" style="--i: 7"><span>25%</span></div>
           </div>
-          <div class="wheel-pointer"><i class="fa-solid fa-caret-down"></i></div>
+          <div class="wheel-pointer">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
         </div>
-        <button class="btn-primary btn-lg spin-btn" id="spinBtn"><i class="fa-solid fa-rotate"></i> Spin Now!</button>
+        <button class="btn-primary btn-lg spin-btn" id="spinBtn">
+          <i class="fa-solid fa-rotate"></i> Spin Now!
+        </button>
         <p class="spin-result" id="spinResult"></p>
       </div>
     </div>
@@ -1609,17 +1804,35 @@
           <span class="loyalty-label">Points Available</span>
         </div>
         <div class="loyalty-tier" id="loyaltyTier">
-          <span class="tier-badge tier-bronze"><i class="fa-solid fa-medal"></i> Bronze</span>
-          <div class="tier-progress"><div class="tier-progress-fill" id="tierProgressFill" style="width:0%"></div></div>
+          <span class="tier-badge tier-bronze"
+            ><i class="fa-solid fa-medal"></i> Bronze</span
+          >
+          <div class="tier-progress">
+            <div
+              class="tier-progress-fill"
+              id="tierProgressFill"
+              style="width: 0%"
+            ></div>
+          </div>
           <small id="tierNextMsg">Earn 500 more points to reach Silver</small>
         </div>
         <div class="loyalty-info">
           <h4>How to earn points:</h4>
           <ul>
-            <li><i class="fa-solid fa-cart-plus"></i> Earn 1 point per $1 spent</li>
-            <li><i class="fa-solid fa-user-plus"></i> 50 points for creating an account</li>
-            <li><i class="fa-solid fa-star"></i> 10 points for each product review</li>
-            <li><i class="fa-solid fa-share-nodes"></i> 5 points for sharing a product</li>
+            <li>
+              <i class="fa-solid fa-cart-plus"></i> Earn 1 point per $1 spent
+            </li>
+            <li>
+              <i class="fa-solid fa-user-plus"></i> 50 points for creating an
+              account
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i> 10 points for each product review
+            </li>
+            <li>
+              <i class="fa-solid fa-share-nodes"></i> 5 points for sharing a
+              product
+            </li>
           </ul>
           <h4>Redeem rewards:</h4>
           <ul>
@@ -1637,10 +1850,20 @@
         <button class="modal-close" id="stockAlertClose">&times;</button>
         <div class="stock-alert-icon"><i class="fa-solid fa-bell"></i></div>
         <h3>Get Notified When Back In Stock</h3>
-        <p>Enter your email and we'll notify you when this item is available again.</p>
+        <p>
+          Enter your email and we'll notify you when this item is available
+          again.
+        </p>
         <form class="stock-alert-form" id="stockAlertForm">
-          <input type="email" id="stockAlertEmail" placeholder="your@email.com" required />
-          <button type="submit" class="btn-primary"><i class="fa-solid fa-bell"></i> Notify Me</button>
+          <input
+            type="email"
+            id="stockAlertEmail"
+            placeholder="your@email.com"
+            required
+          />
+          <button type="submit" class="btn-primary">
+            <i class="fa-solid fa-bell"></i> Notify Me
+          </button>
         </form>
       </div>
     </div>

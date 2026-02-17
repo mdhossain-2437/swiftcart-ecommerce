@@ -10,12 +10,15 @@
   --warning: #f39c12;
   --danger: #e74c3c;
   --info: #3498db;
+  --error: #e74c3c;
   --text: #2c3e50;
   --text-light: #7f8c8d;
   --text-lighter: #95a5a6;
+  --text-muted: #95a5a6;
   --bg: #f8f9fa;
   --bg-alt: #ffffff;
   --bg-dark: #eef1f5;
+  --card-bg: #ffffff;
   --border: #e0e5ec;
   --border-light: #f0f2f5;
   --shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
@@ -34,9 +37,11 @@ body.dark-mode {
   --text: #ecf0f1;
   --text-light: #bdc3c7;
   --text-lighter: #95a5a6;
+  --text-muted: #7f8c8d;
   --bg: #0f0f1a;
   --bg-alt: #1a1a2e;
   --bg-dark: #16213e;
+  --card-bg: #1a1a2e;
   --border: #2c2c44;
   --border-light: #25253d;
   --shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
@@ -3272,7 +3277,7 @@ body.dark-mode .footer {
   margin-bottom: 40px;
   font-size: 1.05rem;
 }
-.category-grid {
+.category-showcase-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 20px;
@@ -3289,7 +3294,7 @@ body.dark-mode .footer {
   overflow: hidden;
 }
 .cat-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -3326,7 +3331,11 @@ body.dark-mode .footer {
 
 /* ---- Free Shipping Progress Bar ---- */
 .free-shipping-bar {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08),
+    rgba(59, 130, 246, 0.08)
+  );
   border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: var(--radius);
   padding: 14px 16px;
@@ -3378,7 +3387,7 @@ body.dark-mode .footer {
   transition: color 0.25s;
 }
 .modal-tab::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -3406,8 +3415,14 @@ body.dark-mode .footer {
   display: block;
 }
 @keyframes fadeTabIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .specs-list {
   list-style: none;
@@ -3678,8 +3693,14 @@ body.dark-mode .footer {
   display: flex;
 }
 @keyframes chatSlideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .chat-header {
   background: linear-gradient(135deg, var(--primary), var(--secondary));

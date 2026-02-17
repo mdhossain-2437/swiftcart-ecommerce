@@ -59,85 +59,600 @@ const TAX_RATE = 0.08;
 /* ========== EXTRA PRODUCTS (50+ custom products) ========== */
 const EXTRA_PRODUCTS = [
   // ===== SHOES =====
-  { id: 101, title: "Nike Air Max 270 Running Shoes", price: 129.99, description: "Lightweight running shoes with Air Max cushioning, breathable mesh upper, and durable rubber outsole for all-day comfort.", category: "shoes", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.6, count: 340 } },
-  { id: 102, title: "Adidas Ultraboost 22 Sneakers", price: 159.99, description: "Premium running sneakers with Boost midsole technology, Primeknit upper, and Continental rubber outsole for superior grip.", category: "shoes", image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg", rating: { rate: 4.8, count: 520 } },
-  { id: 103, title: "Classic Leather Chelsea Boots", price: 89.99, description: "Timeless Chelsea boots crafted from genuine leather with elastic side panels and comfort insole. Perfect for casual and formal occasions.", category: "shoes", image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg", rating: { rate: 4.4, count: 180 } },
-  { id: 104, title: "Converse Chuck Taylor All Star High Top", price: 59.99, description: "Iconic canvas high-top sneakers with rubber toe cap, medial eyelets for ventilation, and OrthoLite insole.", category: "shoes", image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg", rating: { rate: 4.5, count: 890 } },
-  { id: 105, title: "Puma RS-X Reinvention Sneakers", price: 109.99, description: "Retro-inspired chunky sneakers with RS cushioning technology, mesh and leather upper, and rubber outsole.", category: "shoes", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.3, count: 210 } },
-  { id: 106, title: "Timberland 6-Inch Premium Waterproof Boots", price: 198.00, description: "Iconic waterproof boots with premium nubuck leather, padded collar, and anti-fatigue technology for all-day support.", category: "shoes", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.7, count: 445 } },
+  {
+    id: 101,
+    title: "Nike Air Max 270 Running Shoes",
+    price: 129.99,
+    description:
+      "Lightweight running shoes with Air Max cushioning, breathable mesh upper, and durable rubber outsole for all-day comfort.",
+    category: "shoes",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.6, count: 340 },
+  },
+  {
+    id: 102,
+    title: "Adidas Ultraboost 22 Sneakers",
+    price: 159.99,
+    description:
+      "Premium running sneakers with Boost midsole technology, Primeknit upper, and Continental rubber outsole for superior grip.",
+    category: "shoes",
+    image:
+      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    rating: { rate: 4.8, count: 520 },
+  },
+  {
+    id: 103,
+    title: "Classic Leather Chelsea Boots",
+    price: 89.99,
+    description:
+      "Timeless Chelsea boots crafted from genuine leather with elastic side panels and comfort insole. Perfect for casual and formal occasions.",
+    category: "shoes",
+    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    rating: { rate: 4.4, count: 180 },
+  },
+  {
+    id: 104,
+    title: "Converse Chuck Taylor All Star High Top",
+    price: 59.99,
+    description:
+      "Iconic canvas high-top sneakers with rubber toe cap, medial eyelets for ventilation, and OrthoLite insole.",
+    category: "shoes",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    rating: { rate: 4.5, count: 890 },
+  },
+  {
+    id: 105,
+    title: "Puma RS-X Reinvention Sneakers",
+    price: 109.99,
+    description:
+      "Retro-inspired chunky sneakers with RS cushioning technology, mesh and leather upper, and rubber outsole.",
+    category: "shoes",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.3, count: 210 },
+  },
+  {
+    id: 106,
+    title: "Timberland 6-Inch Premium Waterproof Boots",
+    price: 198.0,
+    description:
+      "Iconic waterproof boots with premium nubuck leather, padded collar, and anti-fatigue technology for all-day support.",
+    category: "shoes",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.7, count: 445 },
+  },
 
   // ===== BOOKS =====
-  { id: 201, title: "The Art of Programming - Complete Guide", price: 39.99, description: "Comprehensive programming guide covering algorithms, data structures, design patterns, and best practices for modern software development.", category: "books", image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg", rating: { rate: 4.9, count: 1200 } },
-  { id: 202, title: "JavaScript: The Definitive Guide 7th Edition", price: 45.99, description: "The bible of JavaScript development. Covers ES2020+, Node.js, and modern web APIs with practical examples.", category: "books", image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.7, count: 890 } },
-  { id: 203, title: "Clean Code: A Handbook of Agile Craftsmanship", price: 34.99, description: "Robert C. Martin's classic guide to writing readable, maintainable code. Essential for every developer.", category: "books", image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg", rating: { rate: 4.8, count: 2100 } },
-  { id: 204, title: "Design Patterns: Elements of Reusable Software", price: 49.99, description: "The Gang of Four classic covering 23 essential design patterns for object-oriented software development.", category: "books", image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg", rating: { rate: 4.6, count: 780 } },
-  { id: 205, title: "Atomic Habits by James Clear", price: 16.99, description: "An easy and proven way to build good habits and break bad ones. Over 10 million copies sold worldwide.", category: "books", image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.9, count: 3500 } },
-  { id: 206, title: "The Psychology of Money by Morgan Housel", price: 14.99, description: "Timeless lessons on wealth, greed, and happiness. 19 short stories exploring the strange ways people think about money.", category: "books", image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg", rating: { rate: 4.7, count: 2800 } },
+  {
+    id: 201,
+    title: "The Art of Programming - Complete Guide",
+    price: 39.99,
+    description:
+      "Comprehensive programming guide covering algorithms, data structures, design patterns, and best practices for modern software development.",
+    category: "books",
+    image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    rating: { rate: 4.9, count: 1200 },
+  },
+  {
+    id: 202,
+    title: "JavaScript: The Definitive Guide 7th Edition",
+    price: 45.99,
+    description:
+      "The bible of JavaScript development. Covers ES2020+, Node.js, and modern web APIs with practical examples.",
+    category: "books",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.7, count: 890 },
+  },
+  {
+    id: 203,
+    title: "Clean Code: A Handbook of Agile Craftsmanship",
+    price: 34.99,
+    description:
+      "Robert C. Martin's classic guide to writing readable, maintainable code. Essential for every developer.",
+    category: "books",
+    image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    rating: { rate: 4.8, count: 2100 },
+  },
+  {
+    id: 204,
+    title: "Design Patterns: Elements of Reusable Software",
+    price: 49.99,
+    description:
+      "The Gang of Four classic covering 23 essential design patterns for object-oriented software development.",
+    category: "books",
+    image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    rating: { rate: 4.6, count: 780 },
+  },
+  {
+    id: 205,
+    title: "Atomic Habits by James Clear",
+    price: 16.99,
+    description:
+      "An easy and proven way to build good habits and break bad ones. Over 10 million copies sold worldwide.",
+    category: "books",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.9, count: 3500 },
+  },
+  {
+    id: 206,
+    title: "The Psychology of Money by Morgan Housel",
+    price: 14.99,
+    description:
+      "Timeless lessons on wealth, greed, and happiness. 19 short stories exploring the strange ways people think about money.",
+    category: "books",
+    image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+    rating: { rate: 4.7, count: 2800 },
+  },
 
   // ===== SPORTS & OUTDOORS =====
-  { id: 301, title: "Professional Yoga Mat with Carry Strap", price: 29.99, description: "Extra thick 6mm non-slip yoga mat with alignment lines, moisture-resistant surface, and carrying strap included.", category: "sports & outdoors", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.5, count: 670 } },
-  { id: 302, title: "Adjustable Dumbbell Set 5-52.5 lbs", price: 299.99, description: "Space-saving adjustable dumbbells replacing 15 sets of weights. Quick-change mechanism for seamless workout transitions.", category: "sports & outdoors", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.8, count: 430 } },
-  { id: 303, title: "Waterproof Hiking Backpack 40L", price: 54.99, description: "Durable 40L hiking backpack with waterproof coating, multiple compartments, hydration bladder compatible, and adjustable straps.", category: "sports & outdoors", image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", rating: { rate: 4.6, count: 290 } },
-  { id: 304, title: "Resistance Bands Set - 5 Levels", price: 19.99, description: "Set of 5 latex resistance bands with different tension levels. Includes door anchor, handles, and ankle straps.", category: "sports & outdoors", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.4, count: 1100 } },
-  { id: 305, title: "GPS Sports Watch with Heart Rate Monitor", price: 199.99, description: "Advanced GPS sports watch with built-in heart rate monitor, 14-day battery life, 100+ workout modes, and waterproof to 50m.", category: "sports & outdoors", image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg", rating: { rate: 4.7, count: 560 } },
-  { id: 306, title: "Portable Camping Tent - 4 Person", price: 89.99, description: "Easy-setup 4-person camping tent with waterproof rainfly, mesh windows for ventilation, and durable fiberglass poles.", category: "sports & outdoors", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.3, count: 340 } },
+  {
+    id: 301,
+    title: "Professional Yoga Mat with Carry Strap",
+    price: 29.99,
+    description:
+      "Extra thick 6mm non-slip yoga mat with alignment lines, moisture-resistant surface, and carrying strap included.",
+    category: "sports & outdoors",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.5, count: 670 },
+  },
+  {
+    id: 302,
+    title: "Adjustable Dumbbell Set 5-52.5 lbs",
+    price: 299.99,
+    description:
+      "Space-saving adjustable dumbbells replacing 15 sets of weights. Quick-change mechanism for seamless workout transitions.",
+    category: "sports & outdoors",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.8, count: 430 },
+  },
+  {
+    id: 303,
+    title: "Waterproof Hiking Backpack 40L",
+    price: 54.99,
+    description:
+      "Durable 40L hiking backpack with waterproof coating, multiple compartments, hydration bladder compatible, and adjustable straps.",
+    category: "sports & outdoors",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: { rate: 4.6, count: 290 },
+  },
+  {
+    id: 304,
+    title: "Resistance Bands Set - 5 Levels",
+    price: 19.99,
+    description:
+      "Set of 5 latex resistance bands with different tension levels. Includes door anchor, handles, and ankle straps.",
+    category: "sports & outdoors",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.4, count: 1100 },
+  },
+  {
+    id: 305,
+    title: "GPS Sports Watch with Heart Rate Monitor",
+    price: 199.99,
+    description:
+      "Advanced GPS sports watch with built-in heart rate monitor, 14-day battery life, 100+ workout modes, and waterproof to 50m.",
+    category: "sports & outdoors",
+    image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    rating: { rate: 4.7, count: 560 },
+  },
+  {
+    id: 306,
+    title: "Portable Camping Tent - 4 Person",
+    price: 89.99,
+    description:
+      "Easy-setup 4-person camping tent with waterproof rainfly, mesh windows for ventilation, and durable fiberglass poles.",
+    category: "sports & outdoors",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.3, count: 340 },
+  },
 
   // ===== HOME & KITCHEN =====
-  { id: 401, title: "Smart Air Purifier with HEPA Filter", price: 149.99, description: "HEPA air purifier covering 500 sq ft. WiFi-enabled with app control, auto mode, sleep mode, and real-time air quality display.", category: "home & kitchen", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.6, count: 890 } },
-  { id: 402, title: "Stainless Steel French Press Coffee Maker", price: 24.99, description: "Double-wall insulated French press with 4-level filtration system. Keeps coffee hot for hours. Holds 34 oz.", category: "home & kitchen", image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.5, count: 1200 } },
-  { id: 403, title: "Robot Vacuum Cleaner with Smart Mapping", price: 279.99, description: "Smart robot vacuum with LiDAR mapping, 2500Pa suction, auto-empty base, and 150-min runtime. Works with Alexa.", category: "home & kitchen", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.7, count: 670 } },
-  { id: 404, title: "Cast Iron Dutch Oven 6-Quart", price: 59.99, description: "Pre-seasoned cast iron Dutch oven perfect for slow cooking, braising, baking, and frying. Oven safe to 500°F.", category: "home & kitchen", image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.8, count: 2300 } },
-  { id: 405, title: "Smart LED Light Bulbs - 4 Pack RGB", price: 34.99, description: "WiFi-enabled LED bulbs with 16 million colors, voice control via Alexa/Google, schedules, and scenes. 800 lumens each.", category: "home & kitchen", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.4, count: 560 } },
-  { id: 406, title: "Bamboo Cutting Board Set with Juice Groove", price: 22.99, description: "Set of 3 premium bamboo cutting boards with juice grooves. Anti-bacterial, knife-friendly, and eco-sustainable.", category: "home & kitchen", image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", rating: { rate: 4.5, count: 890 } },
+  {
+    id: 401,
+    title: "Smart Air Purifier with HEPA Filter",
+    price: 149.99,
+    description:
+      "HEPA air purifier covering 500 sq ft. WiFi-enabled with app control, auto mode, sleep mode, and real-time air quality display.",
+    category: "home & kitchen",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.6, count: 890 },
+  },
+  {
+    id: 402,
+    title: "Stainless Steel French Press Coffee Maker",
+    price: 24.99,
+    description:
+      "Double-wall insulated French press with 4-level filtration system. Keeps coffee hot for hours. Holds 34 oz.",
+    category: "home & kitchen",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.5, count: 1200 },
+  },
+  {
+    id: 403,
+    title: "Robot Vacuum Cleaner with Smart Mapping",
+    price: 279.99,
+    description:
+      "Smart robot vacuum with LiDAR mapping, 2500Pa suction, auto-empty base, and 150-min runtime. Works with Alexa.",
+    category: "home & kitchen",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.7, count: 670 },
+  },
+  {
+    id: 404,
+    title: "Cast Iron Dutch Oven 6-Quart",
+    price: 59.99,
+    description:
+      "Pre-seasoned cast iron Dutch oven perfect for slow cooking, braising, baking, and frying. Oven safe to 500°F.",
+    category: "home & kitchen",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.8, count: 2300 },
+  },
+  {
+    id: 405,
+    title: "Smart LED Light Bulbs - 4 Pack RGB",
+    price: 34.99,
+    description:
+      "WiFi-enabled LED bulbs with 16 million colors, voice control via Alexa/Google, schedules, and scenes. 800 lumens each.",
+    category: "home & kitchen",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.4, count: 560 },
+  },
+  {
+    id: 406,
+    title: "Bamboo Cutting Board Set with Juice Groove",
+    price: 22.99,
+    description:
+      "Set of 3 premium bamboo cutting boards with juice grooves. Anti-bacterial, knife-friendly, and eco-sustainable.",
+    category: "home & kitchen",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: { rate: 4.5, count: 890 },
+  },
 
   // ===== BEAUTY & PERSONAL CARE =====
-  { id: 501, title: "Vitamin C Brightening Serum 30ml", price: 28.99, description: "Professional-grade vitamin C serum with hyaluronic acid and vitamin E. Brightens skin, reduces dark spots, and boosts collagen.", category: "beauty", image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.7, count: 3400 } },
-  { id: 502, title: "Premium Hair Dryer with Ionic Technology", price: 79.99, description: "Professional ionic hair dryer with 3 heat settings, cool shot button, concentrator and diffuser attachments. 1875W motor.", category: "beauty", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.5, count: 780 } },
-  { id: 503, title: "Complete Skincare Gift Set - 8 Piece", price: 64.99, description: "Luxury skincare set with cleanser, toner, serum, moisturizer, eye cream, face mask, lip balm, and beauty bag.", category: "beauty", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.6, count: 1200 } },
-  { id: 504, title: "Electric Toothbrush with 4 Brush Heads", price: 42.99, description: "Sonic electric toothbrush with 5 cleaning modes, 2-min smart timer, pressure sensor, and 30-day battery life.", category: "beauty", image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.8, count: 2100 } },
-  { id: 505, title: "Natural Organic Face Cream SPF 30", price: 19.99, description: "Daily moisturizer with SPF 30 sun protection. Made with organic ingredients, lightweight formula, and no harsh chemicals.", category: "beauty", image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.4, count: 670 } },
+  {
+    id: 501,
+    title: "Vitamin C Brightening Serum 30ml",
+    price: 28.99,
+    description:
+      "Professional-grade vitamin C serum with hyaluronic acid and vitamin E. Brightens skin, reduces dark spots, and boosts collagen.",
+    category: "beauty",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.7, count: 3400 },
+  },
+  {
+    id: 502,
+    title: "Premium Hair Dryer with Ionic Technology",
+    price: 79.99,
+    description:
+      "Professional ionic hair dryer with 3 heat settings, cool shot button, concentrator and diffuser attachments. 1875W motor.",
+    category: "beauty",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.5, count: 780 },
+  },
+  {
+    id: 503,
+    title: "Complete Skincare Gift Set - 8 Piece",
+    price: 64.99,
+    description:
+      "Luxury skincare set with cleanser, toner, serum, moisturizer, eye cream, face mask, lip balm, and beauty bag.",
+    category: "beauty",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.6, count: 1200 },
+  },
+  {
+    id: 504,
+    title: "Electric Toothbrush with 4 Brush Heads",
+    price: 42.99,
+    description:
+      "Sonic electric toothbrush with 5 cleaning modes, 2-min smart timer, pressure sensor, and 30-day battery life.",
+    category: "beauty",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.8, count: 2100 },
+  },
+  {
+    id: 505,
+    title: "Natural Organic Face Cream SPF 30",
+    price: 19.99,
+    description:
+      "Daily moisturizer with SPF 30 sun protection. Made with organic ingredients, lightweight formula, and no harsh chemicals.",
+    category: "beauty",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.4, count: 670 },
+  },
 
   // ===== TOYS & GAMES =====
-  { id: 601, title: "LEGO Architecture City Skyline Set", price: 49.99, description: "Build iconic city skylines with this detailed LEGO Architecture set. 597 pieces for ages 12+. Display-worthy model.", category: "toys & games", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.8, count: 1500 } },
-  { id: 602, title: "1000-Piece Adult Jigsaw Puzzle - Starry Night", price: 18.99, description: "Premium 1000-piece puzzle featuring Van Gogh's Starry Night. Precision-cut pieces with anti-glare finish.", category: "toys & games", image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg", rating: { rate: 4.5, count: 890 } },
-  { id: 603, title: "RC Drone with 4K Camera & GPS", price: 189.99, description: "Foldable RC drone with 4K camera, GPS return home, 28-min flight time, follow-me mode, and carrying case included.", category: "toys & games", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.6, count: 430 } },
-  { id: 604, title: "Board Game Collection - Strategy Pack", price: 34.99, description: "Set of 5 award-winning strategy board games for family game night. 2-8 players, ages 8+.", category: "toys & games", image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", rating: { rate: 4.7, count: 670 } },
-  { id: 605, title: "Magnetic Building Blocks 100-Piece Set", price: 39.99, description: "Creative magnetic tiles for STEM learning. 100 pieces in various shapes and colors. Compatible with major brands.", category: "toys & games", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.9, count: 2300 } },
+  {
+    id: 601,
+    title: "LEGO Architecture City Skyline Set",
+    price: 49.99,
+    description:
+      "Build iconic city skylines with this detailed LEGO Architecture set. 597 pieces for ages 12+. Display-worthy model.",
+    category: "toys & games",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.8, count: 1500 },
+  },
+  {
+    id: 602,
+    title: "1000-Piece Adult Jigsaw Puzzle - Starry Night",
+    price: 18.99,
+    description:
+      "Premium 1000-piece puzzle featuring Van Gogh's Starry Night. Precision-cut pieces with anti-glare finish.",
+    category: "toys & games",
+    image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    rating: { rate: 4.5, count: 890 },
+  },
+  {
+    id: 603,
+    title: "RC Drone with 4K Camera & GPS",
+    price: 189.99,
+    description:
+      "Foldable RC drone with 4K camera, GPS return home, 28-min flight time, follow-me mode, and carrying case included.",
+    category: "toys & games",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.6, count: 430 },
+  },
+  {
+    id: 604,
+    title: "Board Game Collection - Strategy Pack",
+    price: 34.99,
+    description:
+      "Set of 5 award-winning strategy board games for family game night. 2-8 players, ages 8+.",
+    category: "toys & games",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: { rate: 4.7, count: 670 },
+  },
+  {
+    id: 605,
+    title: "Magnetic Building Blocks 100-Piece Set",
+    price: 39.99,
+    description:
+      "Creative magnetic tiles for STEM learning. 100 pieces in various shapes and colors. Compatible with major brands.",
+    category: "toys & games",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.9, count: 2300 },
+  },
 
   // ===== AUTOMOTIVE =====
-  { id: 701, title: "Dash Cam 4K with Night Vision", price: 79.99, description: "4K dash camera with wide-angle lens, night vision, G-sensor, parking mode, loop recording, and 32GB SD card included.", category: "automotive", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.6, count: 890 } },
-  { id: 702, title: "Car Phone Mount - Wireless Charger", price: 34.99, description: "Auto-clamping car phone mount with 15W Qi wireless charging. Air vent and dashboard mount included. Compatible with all phones.", category: "automotive", image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg", rating: { rate: 4.5, count: 1200 } },
-  { id: 703, title: "Portable Jump Starter Power Bank 2000A", price: 69.99, description: "2000A peak car jump starter that can start V8 engines. Also works as USB-C power bank, LED flashlight, and emergency tool.", category: "automotive", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.7, count: 560 } },
-  { id: 704, title: "Car Detailing Kit - 20 Piece Professional", price: 44.99, description: "Complete car detailing set with car wash soap, wax, interior cleaner, tire shine, microfiber towels, and applicator pads.", category: "automotive", image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.4, count: 340 } },
+  {
+    id: 701,
+    title: "Dash Cam 4K with Night Vision",
+    price: 79.99,
+    description:
+      "4K dash camera with wide-angle lens, night vision, G-sensor, parking mode, loop recording, and 32GB SD card included.",
+    category: "automotive",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.6, count: 890 },
+  },
+  {
+    id: 702,
+    title: "Car Phone Mount - Wireless Charger",
+    price: 34.99,
+    description:
+      "Auto-clamping car phone mount with 15W Qi wireless charging. Air vent and dashboard mount included. Compatible with all phones.",
+    category: "automotive",
+    image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    rating: { rate: 4.5, count: 1200 },
+  },
+  {
+    id: 703,
+    title: "Portable Jump Starter Power Bank 2000A",
+    price: 69.99,
+    description:
+      "2000A peak car jump starter that can start V8 engines. Also works as USB-C power bank, LED flashlight, and emergency tool.",
+    category: "automotive",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.7, count: 560 },
+  },
+  {
+    id: 704,
+    title: "Car Detailing Kit - 20 Piece Professional",
+    price: 44.99,
+    description:
+      "Complete car detailing set with car wash soap, wax, interior cleaner, tire shine, microfiber towels, and applicator pads.",
+    category: "automotive",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.4, count: 340 },
+  },
 
   // ===== GROCERY & GOURMET =====
-  { id: 801, title: "Organic Matcha Green Tea Powder Premium", price: 24.99, description: "Ceremonial grade organic matcha from Kyoto, Japan. Rich in antioxidants, smooth taste, no bitterness. 100g tin.", category: "grocery & gourmet", image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.8, count: 2100 } },
-  { id: 802, title: "Artisan Dark Chocolate Collection Gift Box", price: 39.99, description: "12 handcrafted dark chocolate truffles in assorted flavors: sea salt, espresso, raspberry, mint, and caramel.", category: "grocery & gourmet", image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", rating: { rate: 4.9, count: 780 } },
-  { id: 803, title: "Premium Mixed Nuts & Dried Fruits 2lb", price: 19.99, description: "Resealable bag of roasted almonds, cashews, walnuts, pecans, cranberries, and apricots. No added sugar or salt.", category: "grocery & gourmet", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.6, count: 1500 } },
-  { id: 804, title: "Gourmet Coffee Beans Variety Pack 3x12oz", price: 32.99, description: "Three bags of single-origin specialty coffee: Ethiopian Yirgacheffe, Colombian Supremo, and Sumatra Mandheling.", category: "grocery & gourmet", image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.7, count: 890 } },
+  {
+    id: 801,
+    title: "Organic Matcha Green Tea Powder Premium",
+    price: 24.99,
+    description:
+      "Ceremonial grade organic matcha from Kyoto, Japan. Rich in antioxidants, smooth taste, no bitterness. 100g tin.",
+    category: "grocery & gourmet",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.8, count: 2100 },
+  },
+  {
+    id: 802,
+    title: "Artisan Dark Chocolate Collection Gift Box",
+    price: 39.99,
+    description:
+      "12 handcrafted dark chocolate truffles in assorted flavors: sea salt, espresso, raspberry, mint, and caramel.",
+    category: "grocery & gourmet",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: { rate: 4.9, count: 780 },
+  },
+  {
+    id: 803,
+    title: "Premium Mixed Nuts & Dried Fruits 2lb",
+    price: 19.99,
+    description:
+      "Resealable bag of roasted almonds, cashews, walnuts, pecans, cranberries, and apricots. No added sugar or salt.",
+    category: "grocery & gourmet",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.6, count: 1500 },
+  },
+  {
+    id: 804,
+    title: "Gourmet Coffee Beans Variety Pack 3x12oz",
+    price: 32.99,
+    description:
+      "Three bags of single-origin specialty coffee: Ethiopian Yirgacheffe, Colombian Supremo, and Sumatra Mandheling.",
+    category: "grocery & gourmet",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.7, count: 890 },
+  },
 
   // ===== MORE ELECTRONICS =====
-  { id: 901, title: "Wireless Noise Cancelling Earbuds Pro", price: 149.99, description: "True wireless earbuds with active noise cancellation, transparency mode, 30-hour battery, and IPX5 waterproof rating.", category: "electronics", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.7, count: 3400 } },
-  { id: 902, title: "4K Ultra HD Webcam with Ring Light", price: 89.99, description: "Professional 4K webcam with built-in ring light, auto-focus, noise-cancelling microphone, and privacy cover.", category: "electronics", image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg", rating: { rate: 4.5, count: 1200 } },
-  { id: 903, title: "Mechanical Gaming Keyboard RGB", price: 69.99, description: "Full-size mechanical keyboard with Cherry MX switches, per-key RGB, macro programming, and detachable wrist rest.", category: "electronics", image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg", rating: { rate: 4.6, count: 890 } },
-  { id: 904, title: "Portable Bluetooth Speaker 30W Waterproof", price: 59.99, description: "30W bluetooth speaker with deep bass, 360° surround sound, IPX7 waterproof, 24-hour battery, and built-in mic.", category: "electronics", image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg", rating: { rate: 4.8, count: 2100 } },
-  { id: 905, title: "Smart Home Hub with Voice Assistant", price: 99.99, description: "Central smart home hub with voice control, 7-inch display, compatible with 10,000+ devices, video calling, and streaming.", category: "electronics", image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", rating: { rate: 4.4, count: 560 } },
-  { id: 906, title: "Wireless Gaming Mouse 16000 DPI", price: 49.99, description: "Ultra-lightweight wireless gaming mouse with 16000 DPI sensor, 6 programmable buttons, RGB, and 70-hour battery.", category: "electronics", image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.6, count: 1500 } },
+  {
+    id: 901,
+    title: "Wireless Noise Cancelling Earbuds Pro",
+    price: 149.99,
+    description:
+      "True wireless earbuds with active noise cancellation, transparency mode, 30-hour battery, and IPX5 waterproof rating.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.7, count: 3400 },
+  },
+  {
+    id: 902,
+    title: "4K Ultra HD Webcam with Ring Light",
+    price: 89.99,
+    description:
+      "Professional 4K webcam with built-in ring light, auto-focus, noise-cancelling microphone, and privacy cover.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/81Zt42iIapL._AC_SX679_.jpg",
+    rating: { rate: 4.5, count: 1200 },
+  },
+  {
+    id: 903,
+    title: "Mechanical Gaming Keyboard RGB",
+    price: 69.99,
+    description:
+      "Full-size mechanical keyboard with Cherry MX switches, per-key RGB, macro programming, and detachable wrist rest.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    rating: { rate: 4.6, count: 890 },
+  },
+  {
+    id: 904,
+    title: "Portable Bluetooth Speaker 30W Waterproof",
+    price: 59.99,
+    description:
+      "30W bluetooth speaker with deep bass, 360° surround sound, IPX7 waterproof, 24-hour battery, and built-in mic.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    rating: { rate: 4.8, count: 2100 },
+  },
+  {
+    id: 905,
+    title: "Smart Home Hub with Voice Assistant",
+    price: 99.99,
+    description:
+      "Central smart home hub with voice control, 7-inch display, compatible with 10,000+ devices, video calling, and streaming.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: { rate: 4.4, count: 560 },
+  },
+  {
+    id: 906,
+    title: "Wireless Gaming Mouse 16000 DPI",
+    price: 49.99,
+    description:
+      "Ultra-lightweight wireless gaming mouse with 16000 DPI sensor, 6 programmable buttons, RGB, and 70-hour battery.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.6, count: 1500 },
+  },
 
   // ===== MORE MEN'S CLOTHING =====
-  { id: 1001, title: "Premium Slim Fit Dress Shirt - Egyptian Cotton", price: 49.99, description: "Luxury dress shirt made from 100% Egyptian cotton with wrinkle-resistant finish. Available in classic white and light blue.", category: "men's clothing", image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg", rating: { rate: 4.5, count: 670 } },
-  { id: 1002, title: "Wool Blend Overcoat - Charcoal Grey", price: 189.99, description: "Premium wool blend overcoat with satin lining, notch lapels, and double-breasted button closure. Dry clean only.", category: "men's clothing", image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg", rating: { rate: 4.7, count: 340 } },
-  { id: 1003, title: "Athletic Performance Polo Shirt", price: 34.99, description: "Moisture-wicking polo shirt with 4-way stretch fabric, UPF 50 sun protection, and anti-odor technology.", category: "men's clothing", image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg", rating: { rate: 4.4, count: 560 } },
+  {
+    id: 1001,
+    title: "Premium Slim Fit Dress Shirt - Egyptian Cotton",
+    price: 49.99,
+    description:
+      "Luxury dress shirt made from 100% Egyptian cotton with wrinkle-resistant finish. Available in classic white and light blue.",
+    category: "men's clothing",
+    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    rating: { rate: 4.5, count: 670 },
+  },
+  {
+    id: 1002,
+    title: "Wool Blend Overcoat - Charcoal Grey",
+    price: 189.99,
+    description:
+      "Premium wool blend overcoat with satin lining, notch lapels, and double-breasted button closure. Dry clean only.",
+    category: "men's clothing",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    rating: { rate: 4.7, count: 340 },
+  },
+  {
+    id: 1003,
+    title: "Athletic Performance Polo Shirt",
+    price: 34.99,
+    description:
+      "Moisture-wicking polo shirt with 4-way stretch fabric, UPF 50 sun protection, and anti-odor technology.",
+    category: "men's clothing",
+    image:
+      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    rating: { rate: 4.4, count: 560 },
+  },
 
   // ===== MORE WOMEN'S CLOTHING =====
-  { id: 1101, title: "Cashmere Blend V-Neck Sweater", price: 79.99, description: "Ultra-soft cashmere blend sweater with ribbed trim, relaxed fit, and classic V-neck design. Hand wash recommended.", category: "women's clothing", image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg", rating: { rate: 4.6, count: 890 } },
-  { id: 1102, title: "High-Waist Yoga Leggings with Pockets", price: 32.99, description: "Buttery-soft yoga leggings with high waist, side pockets, 4-way stretch, and squat-proof material. Moisture-wicking.", category: "women's clothing", image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg", rating: { rate: 4.8, count: 3400 } },
-  { id: 1103, title: "Floral Maxi Wrap Dress", price: 44.99, description: "Elegant floral maxi dress with wrap-around design, adjustable tie waist, flutter sleeves, and flowy skirt.", category: "women's clothing", image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg", rating: { rate: 4.5, count: 670 } },
+  {
+    id: 1101,
+    title: "Cashmere Blend V-Neck Sweater",
+    price: 79.99,
+    description:
+      "Ultra-soft cashmere blend sweater with ribbed trim, relaxed fit, and classic V-neck design. Hand wash recommended.",
+    category: "women's clothing",
+    image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+    rating: { rate: 4.6, count: 890 },
+  },
+  {
+    id: 1102,
+    title: "High-Waist Yoga Leggings with Pockets",
+    price: 32.99,
+    description:
+      "Buttery-soft yoga leggings with high waist, side pockets, 4-way stretch, and squat-proof material. Moisture-wicking.",
+    category: "women's clothing",
+    image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    rating: { rate: 4.8, count: 3400 },
+  },
+  {
+    id: 1103,
+    title: "Floral Maxi Wrap Dress",
+    price: 44.99,
+    description:
+      "Elegant floral maxi dress with wrap-around design, adjustable tie waist, flutter sleeves, and flowy skirt.",
+    category: "women's clothing",
+    image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+    rating: { rate: 4.5, count: 670 },
+  },
 
   // ===== MORE JEWELERY =====
-  { id: 1201, title: "Sterling Silver Infinity Bracelet", price: 29.99, description: "925 sterling silver infinity bracelet with adjustable chain clasp. Comes in a luxury gift box. Hypoallergenic.", category: "jewelery", image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.6, count: 1200 } },
-  { id: 1202, title: "Pearl Drop Earrings - 14K Gold", price: 89.99, description: "Elegant freshwater pearl drop earrings set in 14K gold. 8mm pearls with high luster. Perfect for weddings and special occasions.", category: "jewelery", image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.8, count: 560 } },
-  { id: 1203, title: "Sapphire and Diamond Pendant Necklace", price: 249.99, description: "Stunning sapphire pendant surrounded by pave diamonds on an 18-inch white gold chain. 1.5 carat total weight.", category: "jewelery", image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg", rating: { rate: 4.9, count: 340 } },
+  {
+    id: 1201,
+    title: "Sterling Silver Infinity Bracelet",
+    price: 29.99,
+    description:
+      "925 sterling silver infinity bracelet with adjustable chain clasp. Comes in a luxury gift box. Hypoallergenic.",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.6, count: 1200 },
+  },
+  {
+    id: 1202,
+    title: "Pearl Drop Earrings - 14K Gold",
+    price: 89.99,
+    description:
+      "Elegant freshwater pearl drop earrings set in 14K gold. 8mm pearls with high luster. Perfect for weddings and special occasions.",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.8, count: 560 },
+  },
+  {
+    id: 1203,
+    title: "Sapphire and Diamond Pendant Necklace",
+    price: 249.99,
+    description:
+      "Stunning sapphire pendant surrounded by pave diamonds on an 18-inch white gold chain. 1.5 carat total weight.",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: { rate: 4.9, count: 340 },
+  },
 ];
 
 /* ========== UTILITY ========== */
@@ -158,7 +673,7 @@ function debounce(fn, delay = 300) {
 
 function formatCurrency(n) {
   const rate = window._currencyRate || 1;
-  const symbol = window._currencySymbol || '$';
+  const symbol = window._currencySymbol || "$";
   return symbol + (Number(n) * rate).toFixed(2);
 }
 
@@ -344,7 +859,9 @@ async function fetchProducts() {
     State.allProducts = [...products, ...EXTRA_PRODUCTS];
     State.filteredProducts = [...State.allProducts];
     // Gather all unique categories from all products
-    const allCategories = [...new Set(State.allProducts.map(p => p.category))];
+    const allCategories = [
+      ...new Set(State.allProducts.map((p) => p.category)),
+    ];
     renderCategories(allCategories);
     renderProducts();
     renderDeals(products);
@@ -646,7 +1163,9 @@ function updateCartUI() {
   $("#cartTax").textContent = formatCurrency(totals.tax);
   $("#cartTotal").textContent = formatCurrency(totals.total);
   // Update free shipping progress bar
-  try { updateFreeShippingBar(); } catch(e) {}
+  try {
+    updateFreeShippingBar();
+  } catch (e) {}
 }
 
 function renderCartItems() {
@@ -912,12 +1431,18 @@ function openProductModal(productId) {
   // Recently viewed
   addToRecentlyViewed(product);
   // Size & color selectors
-  try { showSizeColorForProduct(product); } catch(e) {}
+  try {
+    showSizeColorForProduct(product);
+  } catch (e) {}
   // Reset tabs to first tab
   try {
-    document.querySelectorAll('.modal-tab').forEach((t,i) => t.classList.toggle('active', i===0));
-    document.querySelectorAll('.modal-tab-content').forEach((c,i) => c.classList.toggle('active', i===0));
-  } catch(e) {}
+    document
+      .querySelectorAll(".modal-tab")
+      .forEach((t, i) => t.classList.toggle("active", i === 0));
+    document
+      .querySelectorAll(".modal-tab-content")
+      .forEach((c, i) => c.classList.toggle("active", i === 0));
+  } catch (e) {}
   $("#modalOverlay").classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -1613,27 +2138,45 @@ function initCookies() {
 
 /* ========== CURRENCY SWITCHER ========== */
 function initCurrencySwitcher() {
-  const rates = { USD: 1, EUR: 0.92, GBP: 0.79, BDT: 110.5, INR: 83.2, JPY: 149.8 };
-  const symbols = { USD: '$', EUR: '€', GBP: '£', BDT: '৳', INR: '₹', JPY: '¥' };
-  const btn = $('#currencyBtn');
-  const dropdown = $('#currencyDropdown');
+  const rates = {
+    USD: 1,
+    EUR: 0.92,
+    GBP: 0.79,
+    BDT: 110.5,
+    INR: 83.2,
+    JPY: 149.8,
+  };
+  const symbols = {
+    USD: "$",
+    EUR: "€",
+    GBP: "£",
+    BDT: "৳",
+    INR: "₹",
+    JPY: "¥",
+  };
+  const btn = $("#currencySwitcher");
+  const dropdown = $("#currencyDropdown");
   if (!btn || !dropdown) return;
-  let currentCurrency = 'USD';
+  let currentCurrency = "USD";
 
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener("click", (e) => {
     e.stopPropagation();
-    dropdown.classList.toggle('show');
+    dropdown.classList.toggle("show");
   });
-  document.addEventListener('click', () => dropdown.classList.remove('show'));
+  document.addEventListener("click", (e) => { if (!btn.contains(e.target)) dropdown.classList.remove("show"); });
 
-  dropdown.querySelectorAll('.currency-option').forEach(opt => {
-    opt.addEventListener('click', () => {
+  dropdown.querySelectorAll(".currency-option").forEach((opt) => {
+    opt.addEventListener("click", (e) => {
+      e.stopPropagation();
       const code = opt.dataset.currency;
       if (code === currentCurrency) return;
-      dropdown.querySelectorAll('.currency-option').forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
+      dropdown
+        .querySelectorAll(".currency-option")
+        .forEach((o) => o.classList.remove("active"));
+      opt.classList.add("active");
       currentCurrency = code;
-      btn.querySelector('.curr-code').textContent = code;
+      const label = $("#currencyLabel");
+      if (label) label.textContent = code + " " + (opt.dataset.symbol || "$");
       // Update formatCurrency globally
       window._currencyRate = rates[code];
       window._currencySymbol = symbols[code];
@@ -1641,99 +2184,119 @@ function initCurrencySwitcher() {
       renderProducts(State.filteredProducts);
       updateCartUI();
       renderCartItems();
-      dropdown.classList.remove('show');
-      showToast(`Currency changed to ${code}`, 'info');
+      dropdown.classList.remove("show");
+      showToast(`Currency changed to ${code}`, "info");
     });
   });
 }
 
 /* ========== NOTIFICATION CENTER ========== */
 function initNotificationCenter() {
-  const btn = $('#notifBtn');
-  const dropdown = $('#notifDropdown');
-  const badge = $('#notifBadge');
+  const btn = $("#notificationBell");
+  const dropdown = $("#notifDropdown");
+  const badge = $("#notifCount");
   if (!btn || !dropdown) return;
 
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener("click", (e) => {
     e.stopPropagation();
-    dropdown.classList.toggle('show');
+    dropdown.classList.toggle("show");
   });
-  document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target)) dropdown.classList.remove('show');
+  document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove("show");
   });
 
-  const clearBtn = dropdown.querySelector('.notif-clear');
+  const clearBtn = $("#clearNotifs");
   if (clearBtn) {
-    clearBtn.addEventListener('click', () => {
-      const list = dropdown.querySelector('.notif-list');
-      list.innerHTML = '<div style="padding:24px;text-align:center;color:var(--text-muted)"><i class="fa-solid fa-bell-slash" style="font-size:1.5rem;margin-bottom:8px;display:block"></i>No notifications</div>';
-      if (badge) badge.style.display = 'none';
+    clearBtn.addEventListener("click", () => {
+      const list = dropdown.querySelector(".notif-list");
+      list.innerHTML =
+        '<div style="padding:24px;text-align:center;color:var(--text-muted)"><i class="fa-solid fa-bell-slash" style="font-size:1.5rem;margin-bottom:8px;display:block"></i>No notifications</div>';
+      if (badge) badge.style.display = "none";
     });
   }
 }
 
 /* ========== LOYALTY POINTS ========== */
 function initLoyaltyPoints() {
-  const btn = document.querySelector('.loyalty-btn');
-  const overlay = $('#loyaltyOverlay');
-  const closeBtn = $('#loyaltyClose');
+  const btn = document.querySelector(".loyalty-btn");
+  const overlay = $("#loyaltyOverlay");
+  const closeBtn = $("#loyaltyClose");
   if (!btn || !overlay) return;
-  let points = parseInt(localStorage.getItem('swiftcart_loyalty') || '50'); // Start with welcome bonus
+  let points = parseInt(localStorage.getItem("swiftcart_loyalty") || "50"); // Start with welcome bonus
 
   function updateLoyaltyUI() {
-    const balanceEl = $('#loyaltyBalance');
-    const tierFill = $('#tierProgressFill');
-    const tierMsg = $('#tierNextMsg');
-    const tierBadge = overlay.querySelector('.tier-badge');
+    const balanceEl = $("#loyaltyBalance");
+    const tierFill = $("#tierProgressFill");
+    const tierMsg = $("#tierNextMsg");
+    const tierBadge = overlay.querySelector(".tier-badge");
     if (balanceEl) balanceEl.textContent = points;
     // Tier system
-    let tier = 'Bronze', nextTier = 500, tierClass = 'tier-bronze';
-    if (points >= 2000) { tier = 'Platinum'; nextTier = points; tierClass = 'tier-platinum'; }
-    else if (points >= 1000) { tier = 'Gold'; nextTier = 2000; tierClass = 'tier-gold'; }
-    else if (points >= 500) { tier = 'Silver'; nextTier = 1000; tierClass = 'tier-silver'; }
+    let tier = "Bronze",
+      nextTier = 500,
+      tierClass = "tier-bronze";
+    if (points >= 2000) {
+      tier = "Platinum";
+      nextTier = points;
+      tierClass = "tier-platinum";
+    } else if (points >= 1000) {
+      tier = "Gold";
+      nextTier = 2000;
+      tierClass = "tier-gold";
+    } else if (points >= 500) {
+      tier = "Silver";
+      nextTier = 1000;
+      tierClass = "tier-silver";
+    }
     if (tierBadge) {
       tierBadge.className = `tier-badge ${tierClass}`;
       tierBadge.innerHTML = `<i class="fa-solid fa-medal"></i> ${tier}`;
     }
-    const progress = tier === 'Platinum' ? 100 : (points / nextTier) * 100;
-    if (tierFill) tierFill.style.width = Math.min(progress, 100) + '%';
-    if (tierMsg) tierMsg.textContent = tier === 'Platinum' ? 'You\'ve reached the highest tier!' : `Earn ${nextTier - points} more points to reach ${tier === 'Bronze' ? 'Silver' : tier === 'Silver' ? 'Gold' : 'Platinum'}`;
+    const progress = tier === "Platinum" ? 100 : (points / nextTier) * 100;
+    if (tierFill) tierFill.style.width = Math.min(progress, 100) + "%";
+    if (tierMsg)
+      tierMsg.textContent =
+        tier === "Platinum"
+          ? "You've reached the highest tier!"
+          : `Earn ${nextTier - points} more points to reach ${tier === "Bronze" ? "Silver" : tier === "Silver" ? "Gold" : "Platinum"}`;
     // Update badge in navbar
-    const navBadge = document.querySelector('.loyalty-badge');
+    const navBadge = document.querySelector(".loyalty-badge");
     if (navBadge) navBadge.textContent = points;
-    localStorage.setItem('swiftcart_loyalty', points);
+    localStorage.setItem("swiftcart_loyalty", points);
   }
 
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     updateLoyaltyUI();
-    overlay.classList.add('show');
+    overlay.classList.add("show");
   });
-  if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.remove('show'));
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('show'); });
+  if (closeBtn)
+    closeBtn.addEventListener("click", () => overlay.classList.remove("show"));
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.classList.remove("show");
+  });
 
   // Expose function to add points from purchases
-  window.addLoyaltyPoints = function(amount) {
+  window.addLoyaltyPoints = function (amount) {
     points += Math.floor(amount);
     updateLoyaltyUI();
-    showToast(`+${Math.floor(amount)} loyalty points earned!`, 'success');
+    showToast(`+${Math.floor(amount)} loyalty points earned!`, "success");
   };
   updateLoyaltyUI();
 }
 
 /* ========== CATEGORY SHOWCASE ========== */
 function initCategoryShowcase() {
-  const cards = document.querySelectorAll('.cat-card');
+  const cards = document.querySelectorAll(".cat-card");
   if (!cards.length) return;
 
   function updateCategoryCounts() {
     const counts = {};
-    State.allProducts.forEach(p => {
+    State.allProducts.forEach((p) => {
       const cat = p.category.toLowerCase();
       counts[cat] = (counts[cat] || 0) + 1;
     });
-    cards.forEach(card => {
+    cards.forEach((card) => {
       const cat = card.dataset.category;
-      const span = card.querySelector('span');
+      const span = card.querySelector("span");
       if (span && cat) {
         const count = counts[cat.toLowerCase()] || 0;
         span.textContent = `${count} items`;
@@ -1741,26 +2304,32 @@ function initCategoryShowcase() {
     });
   }
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
       const category = card.dataset.category;
       if (!category) return;
-      // Scroll to products
-      const prodSection = document.getElementById('productsSection') || document.querySelector('.products');
-      if (prodSection) prodSection.scrollIntoView({ behavior: 'smooth' });
-      // Apply filter
+      // Scroll to products section
+      const prodSection =
+        document.getElementById("products") ||
+        document.querySelector(".products");
+      if (prodSection) prodSection.scrollIntoView({ behavior: "smooth" });
+      // Apply filter via category buttons
       setTimeout(() => {
-        const filterBtns = document.querySelectorAll('.filter-btn, [data-filter]');
+        const catBtns = document.querySelectorAll(".category-btn");
         let found = false;
-        filterBtns.forEach(btn => {
-          if (btn.dataset.filter && btn.dataset.filter.toLowerCase() === category.toLowerCase()) {
+        catBtns.forEach((btn) => {
+          if (
+            btn.dataset.category &&
+            btn.dataset.category.toLowerCase() === category.toLowerCase()
+          ) {
             btn.click();
             found = true;
           }
         });
         if (!found) {
-          State.filteredProducts = State.allProducts.filter(p => p.category.toLowerCase() === category.toLowerCase());
-          renderProducts(State.filteredProducts);
+          State.currentCategory = category;
+          State.productsShown = State.productsPerPage;
+          applyFilters();
         }
       }, 400);
     });
@@ -1768,7 +2337,7 @@ function initCategoryShowcase() {
 
   // Update counts after products load
   const origFetch = window._swcFetchDone;
-  window._swcFetchDone = function() {
+  window._swcFetchDone = function () {
     updateCategoryCounts();
     if (origFetch) origFetch();
   };
@@ -1778,109 +2347,150 @@ function initCategoryShowcase() {
 
 /* ========== FREE SHIPPING PROGRESS BAR ========== */
 function updateFreeShippingBar() {
-  const bar = document.querySelector('.free-shipping-bar');
+  const bar = document.querySelector(".free-shipping-bar");
   if (!bar) return;
-  const subtotal = State.cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const subtotal = State.cart.reduce(
+    (sum, item) => sum + item.price * item.qty,
+    0,
+  );
   const threshold = 50;
   const progress = Math.min((subtotal / threshold) * 100, 100);
-  const fill = bar.querySelector('.shipping-progress-fill');
-  const msg = bar.querySelector('.shipping-msg');
-  const label = bar.querySelector('p');
-  if (fill) fill.style.width = progress + '%';
+  const fill = bar.querySelector(".shipping-progress-fill");
+  const msg = bar.querySelector(".shipping-message");
+  const label = bar.querySelector("p");
+  if (fill) fill.style.width = progress + "%";
   if (subtotal >= threshold) {
-    if (label) label.innerHTML = '<i class="fa-solid fa-truck-fast"></i> You qualify for FREE shipping!';
-    if (msg) msg.textContent = '🎉 Free shipping unlocked!';
+    if (label)
+      label.innerHTML =
+        '<i class="fa-solid fa-truck-fast"></i> You qualify for FREE shipping!';
+    if (msg) msg.textContent = "🎉 Free shipping unlocked!";
   } else {
     const remaining = (threshold - subtotal).toFixed(2);
-    if (label) label.innerHTML = `<i class="fa-solid fa-truck"></i> Add $${remaining} more for FREE shipping`;
-    if (msg) msg.textContent = `$${subtotal.toFixed(2)} / $${threshold.toFixed(2)}`;
+    if (label)
+      label.innerHTML = `<i class="fa-solid fa-truck"></i> Add $${remaining} more for FREE shipping`;
+    if (msg)
+      msg.textContent = `$${subtotal.toFixed(2)} / $${threshold.toFixed(2)}`;
   }
 }
 
 /* ========== PRODUCT MODAL TABS ========== */
 function initModalTabs() {
-  const tabs = document.querySelectorAll('.modal-tab');
-  const contents = document.querySelectorAll('.modal-tab-content');
+  const tabs = document.querySelectorAll(".modal-tab");
+  const contents = document.querySelectorAll(".modal-tab-content");
   if (!tabs.length) return;
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
-      tab.classList.add('active');
-      const target = document.getElementById(tab.dataset.tab);
-      if (target) target.classList.add('active');
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((c) => c.classList.remove("active"));
+      tab.classList.add("active");
+      // Map data-tab to actual content IDs
+      const tabMap = { "description": "tabDescription", "specs": "tabSpecs", "shipping-info": "tabShippingInfo" };
+      const target = document.getElementById(tabMap[tab.dataset.tab] || tab.dataset.tab);
+      if (target) target.classList.add("active");
     });
   });
 }
 
 /* ========== SIZE & COLOR SELECTORS ========== */
 function initSizeColorSelectors() {
-  const sizeSelector = $('#sizeSelector');
-  const colorSelector = $('#colorSelector');
+  const sizeSelector = $("#sizeSelector");
+  const colorSelector = $("#colorSelector");
   if (!sizeSelector && !colorSelector) return;
 
   // Size buttons
-  document.querySelectorAll('.size-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
+  document.querySelectorAll(".size-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".size-btn")
+        .forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
     });
   });
 
   // Color buttons
-  document.querySelectorAll('.color-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
+  document.querySelectorAll(".color-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".color-btn")
+        .forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
     });
   });
 }
 
 function showSizeColorForProduct(product) {
-  const sizeSelector = $('#sizeSelector');
-  const colorSelector = $('#colorSelector');
+  const sizeSelector = $("#sizeSelector");
+  const colorSelector = $("#colorSelector");
   if (!sizeSelector || !colorSelector) return;
   const cat = product.category.toLowerCase();
   const clothingCats = ["men's clothing", "women's clothing", "shoes"];
-  if (clothingCats.some(c => cat.includes(c))) {
-    sizeSelector.classList.add('visible');
-    colorSelector.classList.add('visible');
+  if (clothingCats.some((c) => cat.includes(c))) {
+    sizeSelector.style.display = "block";
+    colorSelector.style.display = "block";
   } else {
-    sizeSelector.classList.remove('visible');
-    colorSelector.classList.remove('visible');
+    sizeSelector.style.display = "none";
+    colorSelector.style.display = "none";
   }
   // Reset selections
-  document.querySelectorAll('.size-btn, .color-btn').forEach(b => b.classList.remove('selected'));
+  document
+    .querySelectorAll(".size-btn, .color-btn")
+    .forEach((b) => b.classList.remove("selected"));
 }
 
 /* ========== SOCIAL PROOF POPUP ========== */
 function initSocialProof() {
-  const popup = $('#socialProofPopup');
-  const closeBtn = $('#socialProofClose');
+  const popup = $("#socialProofPopup");
+  const closeBtn = $("#socialProofClose");
   if (!popup) return;
 
-  const names = ['Ahmed R.', 'Fatima S.', 'Mohammad K.', 'Ayesha B.', 'John D.', 'Sarah M.', 'Ali H.', 'Priya N.', 'James L.', 'Emma W.', 'Carlos G.', 'Mia T.', 'Yuki K.', 'Hans B.'];
-  const times = ['just now', '2 minutes ago', '5 minutes ago', '8 minutes ago', '12 minutes ago'];
+  const names = [
+    "Ahmed R.",
+    "Fatima S.",
+    "Mohammad K.",
+    "Ayesha B.",
+    "John D.",
+    "Sarah M.",
+    "Ali H.",
+    "Priya N.",
+    "James L.",
+    "Emma W.",
+    "Carlos G.",
+    "Mia T.",
+    "Yuki K.",
+    "Hans B.",
+  ];
+  const times = [
+    "just now",
+    "2 minutes ago",
+    "5 minutes ago",
+    "8 minutes ago",
+    "12 minutes ago",
+  ];
 
   function showSocialProof() {
     if (!State.allProducts.length) return;
-    const product = State.allProducts[Math.floor(Math.random() * State.allProducts.length)];
+    const product =
+      State.allProducts[Math.floor(Math.random() * State.allProducts.length)];
     const name = names[Math.floor(Math.random() * names.length)];
     const time = times[Math.floor(Math.random() * times.length)];
-    const imgEl = $('#socialProofImg');
-    const nameEl = $('#socialProofName');
-    const prodEl = $('#socialProofProduct');
-    const timeEl = $('#socialProofTime');
+    const imgEl = $("#socialProofImg");
+    const nameEl = $("#socialProofName");
+    const prodEl = $("#socialProofProduct");
+    const timeEl = $("#socialProofTime");
     if (imgEl) imgEl.style.backgroundImage = `url(${product.image})`;
     if (nameEl) nameEl.textContent = name;
-    if (prodEl) prodEl.textContent = product.title.substring(0, 40) + (product.title.length > 40 ? '...' : '');
+    if (prodEl)
+      prodEl.textContent =
+        product.title.substring(0, 40) +
+        (product.title.length > 40 ? "..." : "");
     if (timeEl) timeEl.textContent = time;
-    popup.classList.add('show');
-    setTimeout(() => popup.classList.remove('show'), 5000);
+    popup.classList.add("show");
+    setTimeout(() => popup.classList.remove("show"), 5000);
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', () => popup.classList.remove('show'));
+  if (closeBtn)
+    closeBtn.addEventListener("click", () => popup.classList.remove("show"));
 
   // First popup after 20 seconds, then every 30-60 seconds
   setTimeout(() => {
@@ -1891,159 +2501,203 @@ function initSocialProof() {
 
 /* ========== LIVE CHAT WIDGET ========== */
 function initLiveChat() {
-  const toggle = $('#chatToggle');
-  const window_ = $('#chatWindow');
-  const minimize = $('#chatMinimize');
-  const input = $('#chatInput');
-  const sendBtn = $('#chatSend');
-  const messages = $('#chatMessages');
-  const quickReplies = $('#chatQuickReplies');
-  const unread = document.querySelector('.chat-unread');
+  const toggle = $("#chatToggle");
+  const window_ = $("#chatWindow");
+  const minimize = $("#chatMinimize");
+  const input = $("#chatInput");
+  const sendBtn = $("#chatSend");
+  const messages = $("#chatMessages");
+  const quickReplies = $("#chatQuickReplies");
+  const unread = document.querySelector(".chat-unread");
   if (!toggle || !window_) return;
 
   const botResponses = {
-    'track my order': 'You can track your order from the "My Orders" section. Click the user icon → Orders to view your recent purchases and tracking details! 📦',
-    'i need help with returns': 'We offer a 30-day return policy for all items in original condition. To start a return, go to My Orders and select the item you wish to return. We\'ll provide a prepaid shipping label! 🔄',
-    'what are your shipping options?': 'We offer 3 shipping options:\n• Standard (3-5 days) — $4.99 (FREE over $50)\n• Express (1-2 days) — $9.99\n• Overnight — $19.99\nAll orders over $50 get free standard shipping! 🚚',
-    'i have a question about a product': 'I\'d be happy to help! Please share the product name or describe what you\'re looking for, and I\'ll find the information you need. 🔍',
-    'default': 'Thanks for your message! Our team will get back to you shortly. In the meantime, feel free to browse our latest deals! 😊'
+    "track my order":
+      'You can track your order from the "My Orders" section. Click the user icon → Orders to view your recent purchases and tracking details! 📦',
+    "i need help with returns":
+      "We offer a 30-day return policy for all items in original condition. To start a return, go to My Orders and select the item you wish to return. We'll provide a prepaid shipping label! 🔄",
+    "what are your shipping options?":
+      "We offer 3 shipping options:\n• Standard (3-5 days) — $4.99 (FREE over $50)\n• Express (1-2 days) — $9.99\n• Overnight — $19.99\nAll orders over $50 get free standard shipping! 🚚",
+    "i have a question about a product":
+      "I'd be happy to help! Please share the product name or describe what you're looking for, and I'll find the information you need. 🔍",
+    default:
+      "Thanks for your message! Our team will get back to you shortly. In the meantime, feel free to browse our latest deals! 😊",
   };
 
   function addMessage(text, isUser = false) {
-    const div = document.createElement('div');
-    div.className = `chat-msg ${isUser ? 'user' : 'bot'}`;
-    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    div.innerHTML = `<div class="chat-msg-bubble">${Security.sanitize(text)}</div><small>${isUser ? 'You' : 'SwiftCart Bot'} • ${time}</small>`;
+    const div = document.createElement("div");
+    div.className = `chat-msg ${isUser ? "user" : "bot"}`;
+    const time = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    div.innerHTML = `<div class="chat-msg-bubble">${Security.sanitize(text)}</div><small>${isUser ? "You" : "SwiftCart Bot"} • ${time}</small>`;
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
   }
 
   function handleUserMessage(text) {
     addMessage(text, true);
-    if (quickReplies) quickReplies.style.display = 'none';
+    if (quickReplies) quickReplies.style.display = "none";
     // Bot typing indicator
-    const typing = document.createElement('div');
-    typing.className = 'chat-msg bot';
+    const typing = document.createElement("div");
+    typing.className = "chat-msg bot";
     typing.innerHTML = '<div class="chat-msg-bubble">Typing...</div>';
     messages.appendChild(typing);
     messages.scrollTop = messages.scrollHeight;
 
-    setTimeout(() => {
-      typing.remove();
-      const key = text.toLowerCase();
-      const response = botResponses[key] || botResponses['default'];
-      addMessage(response);
-    }, 1000 + Math.random() * 1000);
+    setTimeout(
+      () => {
+        typing.remove();
+        const key = text.toLowerCase();
+        const response = botResponses[key] || botResponses["default"];
+        addMessage(response);
+      },
+      1000 + Math.random() * 1000,
+    );
   }
 
-  toggle.addEventListener('click', () => {
-    window_.classList.toggle('open');
-    if (unread) unread.style.display = 'none';
-    if (window_.classList.contains('open') && input) input.focus();
+  toggle.addEventListener("click", () => {
+    window_.classList.toggle("open");
+    if (unread) unread.style.display = "none";
+    if (window_.classList.contains("open") && input) input.focus();
   });
-  if (minimize) minimize.addEventListener('click', () => window_.classList.remove('open'));
-  if (sendBtn) sendBtn.addEventListener('click', () => {
-    const text = input.value.trim();
-    if (text) { handleUserMessage(text); input.value = ''; }
-  });
-  if (input) input.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
+  if (minimize)
+    minimize.addEventListener("click", () => window_.classList.remove("open"));
+  if (sendBtn)
+    sendBtn.addEventListener("click", () => {
       const text = input.value.trim();
-      if (text) { handleUserMessage(text); input.value = ''; }
-    }
-  });
+      if (text) {
+        handleUserMessage(text);
+        input.value = "";
+      }
+    });
+  if (input)
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const text = input.value.trim();
+        if (text) {
+          handleUserMessage(text);
+          input.value = "";
+        }
+      }
+    });
   if (quickReplies) {
-    quickReplies.querySelectorAll('.quick-reply').forEach(btn => {
-      btn.addEventListener('click', () => handleUserMessage(btn.dataset.msg));
+    quickReplies.querySelectorAll(".quick-reply").forEach((btn) => {
+      btn.addEventListener("click", () => handleUserMessage(btn.dataset.msg));
     });
   }
 }
 
 /* ========== SPIN-TO-WIN WHEEL ========== */
 function initSpinWheel() {
-  const overlay = $('#spinOverlay');
-  const closeBtn = $('#spinClose');
-  const spinBtn = $('#spinBtn');
-  const wheel = $('#spinWheel');
-  const result = $('#spinResult');
+  const overlay = $("#spinOverlay");
+  const closeBtn = $("#spinClose");
+  const spinBtn = $("#spinBtn");
+  const wheel = $("#spinWheel");
+  const result = $("#spinResult");
   if (!overlay || !wheel) return;
 
-  const prizes = ['5%', '10%', 'FREE SHIP', '15%', '$5 OFF', '20%', 'TRY AGAIN', '25%'];
-  let hasSpun = localStorage.getItem('swiftcart_spun');
+  const prizes = [
+    "5%",
+    "10%",
+    "FREE SHIP",
+    "15%",
+    "$5 OFF",
+    "20%",
+    "TRY AGAIN",
+    "25%",
+  ];
+  let hasSpun = localStorage.getItem("swiftcart_spun");
   let isSpinning = false;
 
   // Show spin popup after 45 seconds for first-time visitors
   if (!hasSpun) {
     setTimeout(() => {
-      if (!hasSpun) overlay.classList.add('show');
+      if (!hasSpun) overlay.classList.add("show");
     }, 45000);
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.remove('show'));
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('show'); });
-
-  if (spinBtn) spinBtn.addEventListener('click', () => {
-    if (isSpinning || hasSpun) return;
-    isSpinning = true;
-    spinBtn.disabled = true;
-    spinBtn.textContent = 'Spinning...';
-
-    const segmentAngle = 360 / prizes.length;
-    const winIndex = Math.floor(Math.random() * prizes.length);
-    // Spin to land on the winning segment
-    const rotation = 360 * 5 + (360 - winIndex * segmentAngle - segmentAngle / 2);
-    wheel.style.transform = `rotate(${rotation}deg)`;
-
-    setTimeout(() => {
-      isSpinning = false;
-      hasSpun = true;
-      localStorage.setItem('swiftcart_spun', 'true');
-      const prize = prizes[winIndex];
-      if (prize === 'TRY AGAIN') {
-        result.textContent = 'Better luck next time! 😢';
-        result.className = 'spin-result lose';
-      } else {
-        result.textContent = `🎉 You won ${prize} OFF! Code: SPIN${prize.replace(/[^A-Z0-9]/g, '')}`;
-        result.className = 'spin-result win';
-        showToast(`You won ${prize}! Use code SPIN${prize.replace(/[^A-Z0-9]/g, '')}`, 'success', 6000);
-      }
-      spinBtn.textContent = 'Already Spun';
-    }, 4500);
+  if (closeBtn)
+    closeBtn.addEventListener("click", () => overlay.classList.remove("show"));
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.classList.remove("show");
   });
+
+  if (spinBtn)
+    spinBtn.addEventListener("click", () => {
+      if (isSpinning || hasSpun) return;
+      isSpinning = true;
+      spinBtn.disabled = true;
+      spinBtn.textContent = "Spinning...";
+
+      const segmentAngle = 360 / prizes.length;
+      const winIndex = Math.floor(Math.random() * prizes.length);
+      // Spin to land on the winning segment
+      const rotation =
+        360 * 5 + (360 - winIndex * segmentAngle - segmentAngle / 2);
+      wheel.style.transform = `rotate(${rotation}deg)`;
+
+      setTimeout(() => {
+        isSpinning = false;
+        hasSpun = true;
+        localStorage.setItem("swiftcart_spun", "true");
+        const prize = prizes[winIndex];
+        if (prize === "TRY AGAIN") {
+          result.textContent = "Better luck next time! 😢";
+          result.className = "spin-result lose";
+        } else {
+          result.textContent = `🎉 You won ${prize} OFF! Code: SPIN${prize.replace(/[^A-Z0-9]/g, "")}`;
+          result.className = "spin-result win";
+          showToast(
+            `You won ${prize}! Use code SPIN${prize.replace(/[^A-Z0-9]/g, "")}`,
+            "success",
+            6000,
+          );
+        }
+        spinBtn.textContent = "Already Spun";
+      }, 4500);
+    });
 }
 
 /* ========== BACK IN STOCK ALERT ========== */
 function initStockAlert() {
-  const overlay = $('#stockAlertOverlay');
-  const closeBtn = $('#stockAlertClose');
-  const form = $('#stockAlertForm');
+  const overlay = $("#stockAlertOverlay");
+  const closeBtn = $("#stockAlertClose");
+  const form = $("#stockAlertForm");
   if (!overlay) return;
 
-  if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.remove('show'));
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('show'); });
-
-  if (form) form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = $('#stockAlertEmail').value;
-    showToast(`We'll notify ${email} when this item is back!`, 'success');
-    overlay.classList.remove('show');
-    form.reset();
+  if (closeBtn)
+    closeBtn.addEventListener("click", () => overlay.classList.remove("show"));
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.classList.remove("show");
   });
 
+  if (form)
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = $("#stockAlertEmail").value;
+      showToast(`We'll notify ${email} when this item is back!`, "success");
+      overlay.classList.remove("show");
+      form.reset();
+    });
+
   // Expose function to show alert
-  window.showStockAlert = function() {
-    overlay.classList.add('show');
+  window.showStockAlert = function () {
+    overlay.classList.add("show");
   };
 }
 
 /* ========== ANIMATED STATS COUNTER ========== */
 function initStatsCounter() {
-  const stats = document.querySelectorAll('.stat-number');
+  const stats = document.querySelectorAll(".stat-number");
   if (!stats.length) return;
 
   function animateCounter(el) {
-    const target = parseInt(el.dataset.target || el.textContent.replace(/[^0-9]/g, ''));
-    const suffix = el.textContent.replace(/[0-9,]/g, '');
+    const target = parseInt(
+      el.dataset.target || el.textContent.replace(/[^0-9]/g, ""),
+    );
+    const suffix = el.textContent.replace(/[0-9,]/g, "");
     let current = 0;
     const increment = target / 60;
     const timer = setInterval(() => {
@@ -2056,17 +2710,32 @@ function initStatsCounter() {
     }, 25);
   }
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    stats.forEach(stat => observer.observe(stat));
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+    stats.forEach((stat) => observer.observe(stat));
   }
+}
+
+/* ========== GIFT CARD ========== */
+function initGiftCard() {
+  const btn = $("#buyGiftCard");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    showToast(
+      "🎁 Gift cards coming soon! Enter your email in the newsletter to be notified.",
+      "info",
+    );
+  });
 }
 
 /* ========== INIT ========== */
@@ -2109,6 +2778,7 @@ document.addEventListener("DOMContentLoaded", () => {
   safeInit(initSpinWheel, "SpinWheel");
   safeInit(initStockAlert, "StockAlert");
   safeInit(initStatsCounter, "StatsCounter");
+  safeInit(initGiftCard, "GiftCard");
   fetchProducts().catch((e) =>
     console.error("[SwiftCart] fetchProducts failed:", e),
   );
