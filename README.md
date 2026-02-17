@@ -1,143 +1,184 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT (SwiftCart E-Commerce)
+# 🛒 SwiftCart E-Commerce
 
+একটি সিম্পল ই-কমার্স ওয়েবসাইট যেখানে FakeStore API থেকে ডাটা এনে প্রোডাক্ট দেখানো হয়েছে। ক্যাটাগরি ফিল্টার, প্রোডাক্ট ডিটেইল মোডাল, কার্ট সিস্টেম সহ সম্পূর্ণ ফাংশনাল ওয়েবসাইট।
 
-## Repository: Create your own public repository and submit the link.
+## 🧰 Technology Stack
 
----
-## 🛍️ API Endpoints
----
-1. Get 🛍️ All Products
-```bash
-https://fakestoreapi.com/products
-```
+- HTML5
+- CSS3 (Vanilla CSS)
+- JavaScript (Vanilla JS, ES6+)
+- Font Awesome Icons
+- FakeStore API
 
-2. Get 🛍️ All Categories
-```bash
-https://fakestoreapi.com/products/categories
-```
+## ⚡ Features
 
-3. Get 🛍️ Products by Category
-```bash
-https://fakestoreapi.com/products/category/${category}
-```
-
-Example:
-```bash
-https://fakestoreapi.com/products/category/jewelery
-```
-
-4. Get 🛍️ Single Product Detail
-```bash
-https://fakestoreapi.com/products/${id}
-```
-
-Example:
-```bash
-https://fakestoreapi.com/products/1
-```
+- ✅ Responsive Navbar with mobile menu
+- ✅ Hero/Banner Section
+- ✅ Why Choose Us section
+- ✅ Top Rated Products (API থেকে rating অনুযায়ী)
+- ✅ Dynamic Category Loading from API
+- ✅ Category wise product filtering
+- ✅ Product Cards (Image, Title, Price, Category, Rating, Actions)
+- ✅ Product Detail Modal
+- ✅ Add to Cart with localStorage persistence
+- ✅ Cart Sidebar with total calculation
+- ✅ Remove from Cart
+- ✅ Loading Spinner
+- ✅ Active Category State
+- ✅ Newsletter Section
+- ✅ Footer with social links
+- ✅ Fully Mobile Responsive
 
 ---
 
-## 🎯 Project Specifications (UI/UX)
+## 📝 প্রশ্ন ও উত্তর (বাংলায়)
 
-#### 1) Navbar
-- Website **logo/name** ("SwiftCart") on the **left**
-- **Menu items** (Home, Products, About, Contact) in the **center**
-- **Cart Icon/Button** on the **right** (showing item count is a bonus)
+### ১) `null` এবং `undefined` এর মধ্যে পার্থক্য কি?
 
-#### 2) Banner / Hero Section
-- A **background image** (related to shopping/fashion/electronics)
-- A **title** (e.g., "Best Collection For You") and **subtitle**
-- A **centered button** (e.g., "Shop Now")
+`null` এবং `undefined` দুটোই জাভাস্ক্রিপ্টে "কোনো মান নেই" বোঝায়, কিন্তু এদের মধ্যে একটা গুরুত্বপূর্ণ পার্থক্য আছে।
 
-#### 3) Features / Why Choose Us
-- **Section heading**
-- **3-4 items** highlighting features like "Fast Delivery", "24/7 Support", "Secure Payment", etc. (Icon + Title + Short Text)
+**`undefined`** মানে হলো কোনো ভ্যারিয়েবল ডিক্লেয়ার করা হয়েছে কিন্তু তাকে এখনো কোনো মান দেওয়া হয়নি। জাভাস্ক্রিপ্ট নিজে থেকে এই মানটা সেট করে। যেমন:
 
-#### 4) Trending / Top Rated Section
-- Show **3 top-rated products** (you can filter by rating or just pick the first 3) based on API data or hardcoded for layout practice.
+```js
+let name;
+console.log(name); // undefined
+```
 
-#### 5) Newsletter & Footer
-- **Newsletter Subscription Form**: Email input + Subscribe button.
-- **Footer** with copyright info, social links, and quick links.
+**`null`** মানে হলো ইচ্ছাকৃতভাবে কোনো ভ্যারিয়েবলকে "খালি" বা "কোনো মান নেই" বলে সেট করা হয়েছে। এটা প্রোগ্রামার নিজে করে। যেমন:
 
-#### 6) Responsiveness
-- Website must be **mobile responsive** 
+```js
+let name = null;
+console.log(name); // null
+```
+
+আরেকটি পার্থক্য হলো `typeof undefined` দেয় `"undefined"` কিন্তু `typeof null` দেয় `"object"` (এটা জাভাস্ক্রিপ্টের একটা পুরোনো বাগ)।
+
+সহজ কথায়: `undefined` = জাভাস্ক্রিপ্ট নিজে দেয় যখন মান নেই। `null` = প্রোগ্রামার ইচ্ছা করে দেয় যে এখানে কিছু নেই।
 
 ---
-#### 7) Create a README file to answer the following questions-
 
-> **⚠️ Warning:** Do not use any AI tools to answer these questions. You must write the answers in **Bangla**.
+### ২) JavaScript এ `map()` ফাংশনের কাজ কি? এটা `forEach()` থেকে কিভাবে আলাদা?
 
-#### 1) What is the difference between `null` and `undefined`?
+**`map()`** হলো একটা অ্যারে মেথড যেটা একটা অ্যারের প্রতিটা এলিমেন্টের উপর একটা ফাংশন চালায় এবং **নতুন একটা অ্যারে রিটার্ন** করে। অরিজিনাল অ্যারে পরিবর্তন হয় না।
 
-#### 2) What is the use of the `map()` function in JavaScript? How is it different from `forEach()`?
+```js
+const numbers = [1, 2, 3];
+const doubled = numbers.map((num) => num * 2);
+console.log(doubled); // [2, 4, 6]
+```
 
-#### 3) What is the difference between `==` and `===`?
+**`forEach()`** ও প্রতিটা এলিমেন্টের উপর ফাংশন চালায়, কিন্তু এটা **কিছু রিটার্ন করে না** (undefined রিটার্ন করে)। এটা শুধু সাইড ইফেক্টের জন্য ব্যবহার হয়, যেমন console.log করা বা DOM আপডেট করা।
 
-#### 4) What is the significance of `async`/`await` in fetching API data?
+```js
+const numbers = [1, 2, 3];
+numbers.forEach((num) => console.log(num)); // শুধু প্রিন্ট করবে
+```
 
-#### 5) Explain the concept of Scope in JavaScript (Global, Function, Block).
+**মূল পার্থক্য:**
 
-## ⚡ Dynamic Features & Functionalities
+- `map()` নতুন অ্যারে রিটার্ন করে — তাই চেইনিং করা যায়।
+- `forEach()` কিছু রিটার্ন করে না — শুধু লুপ চালায়।
+- যখন ডাটা ট্রান্সফর্ম করে নতুন অ্যারে দরকার, তখন `map()` ব্যবহার করি। আর যখন শুধু কিছু একটা করতে চাই প্রতিটা আইটেম দিয়ে (যেমন প্রিন্ট করা), তখন `forEach()` ব্যবহার করি।
 
-1) Category Loading
-Load Product Categories dynamically on the UI (e.g., as filter buttons or a dropdown).
+---
 
-2) Category Click → Product Data
-On clicking a category: load products of that specific category.
-Display in a grid layout (e.g., 3 or 4 columns).
+### ৩) `==` এবং `===` এর মধ্যে পার্থক্য কি?
 
-3) Card Contents
-Each product card must include:
-- **Image** (from API)
-- **Title** (truncated if too long)
-- **Price** ($ value)
-- **Category** (badge or text)
-- **Rating** (Visualize stars or just show the number)
-- **Details Button**
-- **Add to Cart button**
+**`==` (Loose Equality / Abstract Equality):** এটা দুইটা মান তুলনা করার সময় **টাইপ কনভার্ট** করে নেয়। মানে দুইটা ভিন্ন টাইপের মানকেও সমান বলতে পারে।
 
-4) Modal on "Details" Click
-Clicking the "Details" button on a card opens a modal with full product details:
-- Full Title
-- Full Description
-- Price & Rating
-- "Buy Now" or "Add to Cart" button in modal.
+```js
+console.log(5 == "5"); // true (স্ট্রিং "5" কে নম্বর ৫ এ কনভার্ট করে)
+console.log(0 == false); // true (false কে 0 এ কনভার্ট করে)
+console.log(null == undefined); // true
+```
 
-## 🧪 Challenges (Optional)
+**`===` (Strict Equality):** এটা মান এবং **টাইপ দুটোই** চেক করে। কোনো কনভার্শন করে না। তাই এটা বেশি নির্ভরযোগ্য।
 
-    1) Add to Cart Interaction
-    Clicking "Add to Cart":
-    - Adds the product to a Cart list/array.
-    - Updates a Cart Count in the Navbar.
-    - (Optional) Persist in LocalStorage.
+```js
+console.log(5 === "5"); // false (নম্বর আর স্ট্রিং — টাইপ আলাদা)
+console.log(0 === false); // false (নম্বর আর বুলিয়ান — টাইপ আলাদা)
+console.log(null === undefined); // false
+```
 
-    2) Cart Calculation
-    Show a summary (maybe in a sidebar or a separate section/modal) that lists added items and calculates the **Total Price**.
+**সবসময় `===` ব্যবহার করা উচিত** কারণ এটা বাগ থেকে বাঁচায়। `==` ব্যবহারে অপ্রত্যাশিত রেজাল্ট আসতে পারে কারণ জাভাস্ক্রিপ্ট নিজে নিজে টাইপ কনভার্ট করে ফেলে।
 
-    3) Remove from Cart
-    Ability to remove an item from the cart and update the Total Price instantly.
+---
 
-    4) Loading Spinner
-    Show a loading spinner or skeleton loader while fetching data from the API.
+### ৪) API ডাটা ফেচ করার ক্ষেত্রে `async`/`await` এর গুরুত্ব কি?
 
-    5) Active State
-    Highlight the currently selected category button.
+জাভাস্ক্রিপ্ট হলো সিঙ্গেল-থ্রেডেড ল্যাঙ্গুয়েজ। API থেকে ডাটা আনতে সময় লাগে, এবং এই সময় পুরো প্রোগ্রাম থেমে থাকলে ইউজার এক্সপেরিয়েন্স খারাপ হবে। এজন্য অ্যাসিনক্রোনাস প্রোগ্রামিং দরকার।
 
-🧰 Technology Stack:
-    HTML
-    CSS (Vanilla / Tailwind / DaisyUI)
-    JavaScript (Vanilla only, no frameworks like React/Vue for this assignment)
+**`async`/`await`** হলো Promise নিয়ে কাজ করার একটা সহজ এবং পরিষ্কার উপায়।
 
-📌 Rules
-✅ At least 5 meaningful commits
-❌ No dummy text where real data can be shown.
+- **`async`** কোনো ফাংশনের আগে লেখা হয়, যার মানে ফাংশনটা একটা Promise রিটার্ন করবে।
+- **`await`** কোনো Promise এর সামনে লেখা হয়, যার মানে সেই Promise রেজল্ভ না হওয়া পর্যন্ত অপেক্ষা করবে।
+
+```js
+async function getProducts() {
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+  console.log(data);
+}
+```
+
+**`async`/`await` এর সুবিধা:**
+
+- কোড দেখতে সিনক্রোনাস কোডের মতো সহজ ও পরিষ্কার হয়। `.then().then()` চেইনিং এর চেয়ে অনেক সুন্দর।
+- `try/catch` দিয়ে সহজে এরর হ্যান্ডেল করা যায়।
+- কোড পড়তে এবং ডিবাগ করতে সুবিধা হয়।
+
+`async`/`await` ছাড়া আমাদের `.then()` চেইন ব্যবহার করতে হতো, যেটা নেস্টেড হলে "callback hell" এর মতো জটিল হয়ে যায়।
+
+---
+
+### ৫) JavaScript এ Scope (Global, Function, Block) ব্যাখ্যা করো।
+
+**Scope** মানে হলো কোনো ভ্যারিয়েবল কোথায় কোথায় অ্যাক্সেস করা যায় সেই এরিয়া বা সীমানা। জাভাস্ক্রিপ্টে তিন ধরনের স্কোপ আছে:
+
+#### ক) Global Scope (গ্লোবাল স্কোপ):
+
+কোনো ফাংশন বা ব্লকের বাইরে ডিক্লেয়ার করা ভ্যারিয়েবল গ্লোবাল স্কোপে থাকে। এটা কোডের যেকোনো জায়গা থেকে অ্যাক্সেস করা যায়।
+
+```js
+let siteName = "SwiftCart"; // গ্লোবাল স্কোপ
+
+function showName() {
+  console.log(siteName); // এখান থেকেও অ্যাক্সেস করা যায়
+}
+showName(); // "SwiftCart"
+```
+
+#### খ) Function Scope (ফাংশন স্কোপ):
+
+কোনো ফাংশনের ভিতরে ডিক্লেয়ার করা ভ্যারিয়েবল শুধু সেই ফাংশনের ভিতরেই অ্যাক্সেস করা যায়। বাইরে থেকে পাওয়া যায় না। `var` দিয়ে ডিক্লেয়ার করলে ফাংশন স্কোপ হয়।
+
+```js
+function calculatePrice() {
+  var price = 100; // ফাংশন স্কোপ
+  console.log(price); // 100 — কাজ করবে
+}
+calculatePrice();
+console.log(price); // Error! — ফাংশনের বাইরে পাওয়া যাবে না
+```
+
+#### গ) Block Scope (ব্লক স্কোপ):
+
+`let` এবং `const` দিয়ে ডিক্লেয়ার করা ভ্যারিয়েবল শুধু সেই `{}` ব্লকের ভিতরেই অ্যাক্সেস করা যায়। `if`, `for`, `while` ইত্যাদির ভিতরে ডিক্লেয়ার করলে সেটা ব্লক স্কোপে থাকে।
+
+```js
+if (true) {
+  let discount = 20; // ব্লক স্কোপ
+  const tax = 5; // ব্লক স্কোপ
+  console.log(discount); // 20 — কাজ করবে
+}
+console.log(discount); // Error! — ব্লকের বাইরে পাওয়া যাবে না
+```
+
+**সারমর্ম:** `var` হলো ফাংশন স্কোপড, আর `let`/`const` হলো ব্লক স্কোপড। আধুনিক জাভাস্ক্রিপ্টে `let` এবং `const` ব্যবহার করা উচিত কারণ ব্লক স্কোপ বেশি নিরাপদ এবং বাগ কম হয়।
+
+---
 
 ## 🔗 Submission
+
 - **Live Link :** YOUR_DEPLOYED_URL_HERE
 - **GitHub Repository:** YOUR_REPO_URL_HERE
-
-
-### 📅 Deadline For 60 marks: 17th February, 2026 (11:59 pm ⏱️)
-- Note: There won't be any 50 or 30 marks submission deadline. Only 60 marks submission deadline. After 17th February, 2026 (11:59 pm ⏱️) no submission will be accepted.
