@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftCart - Best Collection For You</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-cart-shopping"></i> SwiftCart
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== BANNER / HERO SECTION ========== -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Best Collection For You</h1>
+        <p>
+          Discover the latest trends in fashion, electronics, and jewelry — all
+          at unbeatable prices.
+        </p>
+        <a href="#products" class="btn-primary"
+          >Shop Now <i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES / WHY CHOOSE US ========== -->
+    <section class="features" id="about">
+      <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">
+          We deliver the best shopping experience with top-notch service
+        </p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>
+              Get your orders delivered within 2-3 business days with our
+              express shipping service.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>
+              Our dedicated support team is available round the clock to assist
+              you with any queries.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>
+              Shop with confidence using our encrypted and secure payment
+              gateway system.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>
+              Not satisfied? Return your product within 30 days for a full
+              refund, no questions asked.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRENDING / TOP RATED ========== -->
+    <section class="trending">
+      <div class="container">
+        <h2 class="section-title">Top Rated Products</h2>
+        <p class="section-subtitle">
+          Our customers love these products the most
+        </p>
+        <div class="trending-grid" id="trendingProducts">
+          <!-- Dynamically loaded -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTS SECTION ========== -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Browse products by category</p>
+
+        <!-- Category Buttons -->
+        <div class="category-container" id="categoryContainer">
+          <button class="category-btn active" data-category="all">All</button>
+          <!-- Dynamically loaded categories -->
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="spinner" id="spinner">
+          <div class="loader"></div>
+          <p>Loading products...</p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Dynamically loaded products -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter" id="contact">
+      <div class="container">
+        <h2 class="section-title light">Subscribe to Our Newsletter</h2>
+        <p class="section-subtitle light">
+          Get the latest updates on new products and upcoming sales
+        </p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3><i class="fa-solid fa-cart-shopping"></i> SwiftCart</h3>
+            <p>
+              Your one-stop destination for the best products at amazing prices.
+              Shop smart, shop SwiftCart.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 SwiftCart. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== PRODUCT DETAIL MODAL ========== -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="productModal">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modalImage" src="" alt="Product" />
+          </div>
+          <div class="modal-info">
+            <span class="modal-category" id="modalCategory"></span>
+            <h2 id="modalTitle"></h2>
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-rating" id="modalRating"></div>
+            <p class="modal-price" id="modalPrice"></p>
+            <button class="btn-primary modal-cart-btn" id="modalCartBtn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CART SIDEBAR ========== -->
+    <div class="cart-overlay" id="cartOverlay">
+      <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+          <h2><i class="fa-solid fa-bag-shopping"></i> Your Cart</h2>
+          <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <!-- Dynamically loaded cart items -->
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0.00</span>
+          </div>
+          <button class="btn-primary cart-checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
