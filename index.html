@@ -4,47 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="SwiftCart - Premium e-commerce platform. Discover fashion, electronics, jewelry at unbeatable prices. Fast delivery, secure payments, easy returns." />
-    <meta name="keywords" content="ecommerce, shopping, fashion, electronics, jewelry, online store, SwiftCart, best deals" />
+    <meta
+      name="description"
+      content="SwiftCart - Premium e-commerce platform. Discover fashion, electronics, jewelry at unbeatable prices. Fast delivery, secure payments, easy returns."
+    />
+    <meta
+      name="keywords"
+      content="ecommerce, shopping, fashion, electronics, jewelry, online store, SwiftCart, best deals"
+    />
     <meta name="author" content="SwiftCart" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ff6b35" />
     <meta property="og:title" content="SwiftCart - Best Collection For You" />
-    <meta property="og:description" content="Discover the latest trends in fashion, electronics, and jewelry at unbeatable prices." />
+    <meta
+      property="og:description"
+      content="Discover the latest trends in fashion, electronics, and jewelry at unbeatable prices."
+    />
     <meta property="og:type" content="website" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>SwiftCart - Best Collection For You</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- ========== ANNOUNCEMENT BAR ========== -->
     <div class="announcement-bar" id="announcementBar">
       <div class="container">
-        <p><i class="fa-solid fa-bolt"></i> Flash Sale! Use code <strong>SWIFT20</strong> for 20% off &mdash; Ends in <span id="flashTimer">02:00:00</span></p>
-        <button class="announcement-close" id="announcementClose" aria-label="Close announcement">&times;</button>
+        <p>
+          <i class="fa-solid fa-bolt"></i> Flash Sale! Use code
+          <strong>SWIFT20</strong> for 20% off &mdash; Ends in
+          <span id="flashTimer">02:00:00</span>
+        </p>
+        <button
+          class="announcement-close"
+          id="announcementClose"
+          aria-label="Close announcement"
+        >
+          &times;
+        </button>
       </div>
     </div>
 
     <!-- ========== NAVBAR ========== -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div class="nav-container">
         <a href="#" class="logo" aria-label="SwiftCart Home">
           <i class="fa-solid fa-cart-shopping"></i> SwiftCart
         </a>
         <div class="search-bar" id="searchBar">
           <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" id="searchInput" placeholder="Search products, categories..." autocomplete="off" aria-label="Search products" />
-          <button class="search-clear" id="searchClear" aria-label="Clear search" style="display:none">&times;</button>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products, categories..."
+            autocomplete="off"
+            aria-label="Search products"
+          />
+          <button
+            class="search-clear"
+            id="searchClear"
+            aria-label="Clear search"
+            style="display: none"
+          >
+            &times;
+          </button>
           <div class="search-results" id="searchResults"></div>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="nav-menu" id="navMenu">
@@ -55,22 +107,47 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-actions">
-          <button class="nav-action-btn" id="darkModeToggle" aria-label="Toggle dark mode" title="Dark Mode">
+          <button
+            class="nav-action-btn"
+            id="darkModeToggle"
+            aria-label="Toggle dark mode"
+            title="Dark Mode"
+          >
             <i class="fa-solid fa-moon"></i>
           </button>
-          <button class="nav-action-btn" id="wishlistIcon" aria-label="Wishlist" title="Wishlist">
+          <button
+            class="nav-action-btn"
+            id="wishlistIcon"
+            aria-label="Wishlist"
+            title="Wishlist"
+          >
             <i class="fa-solid fa-heart"></i>
             <span class="action-badge" id="wishlistCount">0</span>
           </button>
-          <button class="nav-action-btn" id="compareIcon" aria-label="Compare" title="Compare">
+          <button
+            class="nav-action-btn"
+            id="compareIcon"
+            aria-label="Compare"
+            title="Compare"
+          >
             <i class="fa-solid fa-code-compare"></i>
             <span class="action-badge" id="compareCount">0</span>
           </button>
-          <button class="nav-action-btn cart-trigger" id="cartIcon" aria-label="Cart" title="Cart">
+          <button
+            class="nav-action-btn cart-trigger"
+            id="cartIcon"
+            aria-label="Cart"
+            title="Cart"
+          >
             <i class="fa-solid fa-bag-shopping"></i>
             <span class="action-badge cart-badge" id="cartCount">0</span>
           </button>
-          <button class="nav-action-btn" id="userIcon" aria-label="Account" title="Account">
+          <button
+            class="nav-action-btn"
+            id="userIcon"
+            aria-label="Account"
+            title="Account"
+          >
             <i class="fa-solid fa-user"></i>
           </button>
         </div>
@@ -83,14 +160,26 @@
       <div class="hero-content">
         <span class="hero-badge">New Season Collection 2026</span>
         <h1>Best Collection <br />For You</h1>
-        <p>Discover the latest trends in fashion, electronics, and jewelry &mdash; all at unbeatable prices with free shipping on orders over $50.</p>
+        <p>
+          Discover the latest trends in fashion, electronics, and jewelry
+          &mdash; all at unbeatable prices with free shipping on orders over
+          $50.
+        </p>
         <div class="hero-actions">
-          <a href="#products" class="btn-primary btn-lg">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#deals" class="btn-outline-light btn-lg">View Deals <i class="fa-solid fa-tags"></i></a>
+          <a href="#products" class="btn-primary btn-lg"
+            >Shop Now <i class="fa-solid fa-arrow-right"></i
+          ></a>
+          <a href="#deals" class="btn-outline-light btn-lg"
+            >View Deals <i class="fa-solid fa-tags"></i
+          ></a>
         </div>
         <div class="hero-stats">
-          <div class="hero-stat"><strong>10K+</strong><span>Products</span></div>
-          <div class="hero-stat"><strong>50K+</strong><span>Customers</span></div>
+          <div class="hero-stat">
+            <strong>10K+</strong><span>Products</span>
+          </div>
+          <div class="hero-stat">
+            <strong>50K+</strong><span>Customers</span>
+          </div>
           <div class="hero-stat"><strong>4.9</strong><span>Rating</span></div>
         </div>
       </div>
@@ -100,14 +189,60 @@
     <section class="features" id="about">
       <div class="container">
         <h2 class="section-title">Why Choose Us</h2>
-        <p class="section-subtitle">We deliver the best shopping experience with top-notch service</p>
+        <p class="section-subtitle">
+          We deliver the best shopping experience with top-notch service
+        </p>
         <div class="features-grid">
-          <div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div><h3>Free Shipping</h3><p>Free shipping on all orders over $50. Express delivery within 2-3 business days.</p></div>
-          <div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-headset"></i></div><h3>24/7 Support</h3><p>Our dedicated support team is available round the clock to assist you.</p></div>
-          <div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Secure Payment</h3><p>256-bit SSL encryption. Shop with confidence using our secure gateway.</p></div>
-          <div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div><h3>Easy Returns</h3><p>30-day money back guarantee. Return products hassle-free.</p></div>
-          <div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-percent"></i></div><h3>Best Prices</h3><p>Price match guarantee. Found it cheaper? We will match the price.</p></div>
-          <div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-award"></i></div><h3>Quality Guarantee</h3><p>Every product is quality checked. 100% authentic branded products only.</p></div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3>Free Shipping</h3>
+            <p>
+              Free shipping on all orders over $50. Express delivery within 2-3
+              business days.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>24/7 Support</h3>
+            <p>
+              Our dedicated support team is available round the clock to assist
+              you.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>
+              256-bit SSL encryption. Shop with confidence using our secure
+              gateway.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>30-day money back guarantee. Return products hassle-free.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-percent"></i></div>
+            <h3>Best Prices</h3>
+            <p>
+              Price match guarantee. Found it cheaper? We will match the price.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+            <h3>Quality Guarantee</h3>
+            <p>
+              Every product is quality checked. 100% authentic branded products
+              only.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -117,13 +252,27 @@
       <div class="container">
         <div class="deals-header">
           <div>
-            <h2 class="section-title" style="text-align:left">Flash Deals <i class="fa-solid fa-fire" style="color:var(--danger)"></i></h2>
-            <p class="section-subtitle" style="text-align:left;margin-bottom:0">Limited-time offers with massive discounts!</p>
+            <h2 class="section-title" style="text-align: left">
+              Flash Deals
+              <i class="fa-solid fa-fire" style="color: var(--danger)"></i>
+            </h2>
+            <p
+              class="section-subtitle"
+              style="text-align: left; margin-bottom: 0"
+            >
+              Limited-time offers with massive discounts!
+            </p>
           </div>
           <div class="countdown-timer" id="dealCountdown">
-            <div class="countdown-item"><span id="countHours">00</span><small>Hours</small></div>
-            <div class="countdown-item"><span id="countMinutes">00</span><small>Minutes</small></div>
-            <div class="countdown-item"><span id="countSeconds">00</span><small>Seconds</small></div>
+            <div class="countdown-item">
+              <span id="countHours">00</span><small>Hours</small>
+            </div>
+            <div class="countdown-item">
+              <span id="countMinutes">00</span><small>Minutes</small>
+            </div>
+            <div class="countdown-item">
+              <span id="countSeconds">00</span><small>Seconds</small>
+            </div>
           </div>
         </div>
         <div class="deals-grid" id="dealsGrid"></div>
@@ -134,7 +283,9 @@
     <section class="trending">
       <div class="container">
         <h2 class="section-title">Top Rated Products</h2>
-        <p class="section-subtitle">Our customers love these products the most</p>
+        <p class="section-subtitle">
+          Our customers love these products the most
+        </p>
         <div class="trending-grid" id="trendingProducts"></div>
       </div>
     </section>
@@ -147,15 +298,28 @@
         <div class="product-toolbar">
           <div class="toolbar-left">
             <div class="category-container" id="categoryContainer">
-              <button class="category-btn active" data-category="all">All</button>
+              <button class="category-btn active" data-category="all">
+                All
+              </button>
             </div>
           </div>
           <div class="toolbar-right">
             <div class="price-filter">
               <label>Max: $<span id="priceMaxLabel">1000</span></label>
-              <input type="range" id="priceRange" min="0" max="1000" value="1000" class="range-slider" />
+              <input
+                type="range"
+                id="priceRange"
+                min="0"
+                max="1000"
+                value="1000"
+                class="range-slider"
+              />
             </div>
-            <select class="sort-select" id="sortSelect" aria-label="Sort products">
+            <select
+              class="sort-select"
+              id="sortSelect"
+              aria-label="Sort products"
+            >
               <option value="default">Sort: Default</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -165,29 +329,67 @@
               <option value="name-za">Name: Z-A</option>
             </select>
             <div class="view-toggle">
-              <button class="view-btn active" data-view="grid" aria-label="Grid view"><i class="fa-solid fa-grip"></i></button>
-              <button class="view-btn" data-view="list" aria-label="List view"><i class="fa-solid fa-list"></i></button>
+              <button
+                class="view-btn active"
+                data-view="grid"
+                aria-label="Grid view"
+              >
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="view-btn" data-view="list" aria-label="List view">
+                <i class="fa-solid fa-list"></i>
+              </button>
             </div>
           </div>
         </div>
         <p class="product-count" id="productCount">Showing 0 products</p>
         <div class="spinner" id="spinner">
           <div class="skeleton-grid">
-            <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text short"></div><div class="skeleton-text shorter"></div></div>
-            <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text short"></div><div class="skeleton-text shorter"></div></div>
-            <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text short"></div><div class="skeleton-text shorter"></div></div>
-            <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text short"></div><div class="skeleton-text shorter"></div></div>
+            <div class="skeleton-card">
+              <div class="skeleton-img"></div>
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text shorter"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton-img"></div>
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text shorter"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton-img"></div>
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text shorter"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton-img"></div>
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text shorter"></div>
+            </div>
           </div>
         </div>
         <div class="products-grid" id="productsGrid"></div>
         <div class="pagination-container" id="paginationContainer">
-          <button class="btn-primary btn-load-more" id="loadMoreBtn" style="display:none">Load More Products <i class="fa-solid fa-arrow-down"></i></button>
+          <button
+            class="btn-primary btn-load-more"
+            id="loadMoreBtn"
+            style="display: none"
+          >
+            Load More Products <i class="fa-solid fa-arrow-down"></i>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- ========== RECENTLY VIEWED ========== -->
-    <section class="recently-viewed-section" id="recentlyViewed" style="display:none">
+    <section
+      class="recently-viewed-section"
+      id="recentlyViewed"
+      style="display: none"
+    >
       <div class="container">
         <h2 class="section-title">Recently Viewed</h2>
         <p class="section-subtitle">Products you looked at recently</p>
@@ -202,19 +404,49 @@
         <p class="section-subtitle">Real reviews from real customers</p>
         <div class="testimonials-grid">
           <div class="testimonial-card">
-            <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <p>"Amazing quality and super fast delivery! I have been shopping here for months and never been disappointed."</p>
-            <div class="testimonial-author"><div class="author-avatar">SH</div><div><strong>Sarah H.</strong><span>Verified Buyer</span></div></div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              "Amazing quality and super fast delivery! I have been shopping
+              here for months and never been disappointed."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SH</div>
+              <div><strong>Sarah H.</strong><span>Verified Buyer</span></div>
+            </div>
           </div>
           <div class="testimonial-card">
-            <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <p>"Customer support is outstanding. They helped me with my return within minutes. Best experience ever."</p>
-            <div class="testimonial-author"><div class="author-avatar">MR</div><div><strong>Michael R.</strong><span>Verified Buyer</span></div></div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              "Customer support is outstanding. They helped me with my return
+              within minutes. Best experience ever."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div><strong>Michael R.</strong><span>Verified Buyer</span></div>
+            </div>
           </div>
           <div class="testimonial-card">
-            <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-            <p>"Prices are unbeatable! SwiftCart always has the best deals. Plus free shipping is a huge bonus."</p>
-            <div class="testimonial-author"><div class="author-avatar">EL</div><div><strong>Emily L.</strong><span>Verified Buyer</span></div></div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p>
+              "Prices are unbeatable! SwiftCart always has the best deals. Plus
+              free shipping is a huge bonus."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">EL</div>
+              <div><strong>Emily L.</strong><span>Verified Buyer</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -226,18 +458,42 @@
         <h2 class="section-title">Trusted Brands</h2>
         <div class="brands-marquee">
           <div class="brands-track">
-            <div class="brand-item"><i class="fa-brands fa-apple"></i> Apple</div>
-            <div class="brand-item"><i class="fa-brands fa-microsoft"></i> Microsoft</div>
-            <div class="brand-item"><i class="fa-brands fa-google"></i> Google</div>
-            <div class="brand-item"><i class="fa-brands fa-amazon"></i> Amazon</div>
-            <div class="brand-item"><i class="fa-brands fa-shopify"></i> Shopify</div>
-            <div class="brand-item"><i class="fa-brands fa-paypal"></i> PayPal</div>
-            <div class="brand-item"><i class="fa-brands fa-stripe"></i> Stripe</div>
-            <div class="brand-item"><i class="fa-brands fa-apple"></i> Apple</div>
-            <div class="brand-item"><i class="fa-brands fa-microsoft"></i> Microsoft</div>
-            <div class="brand-item"><i class="fa-brands fa-google"></i> Google</div>
-            <div class="brand-item"><i class="fa-brands fa-amazon"></i> Amazon</div>
-            <div class="brand-item"><i class="fa-brands fa-shopify"></i> Shopify</div>
+            <div class="brand-item">
+              <i class="fa-brands fa-apple"></i> Apple
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-microsoft"></i> Microsoft
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-google"></i> Google
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-amazon"></i> Amazon
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-shopify"></i> Shopify
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-paypal"></i> PayPal
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-stripe"></i> Stripe
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-apple"></i> Apple
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-microsoft"></i> Microsoft
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-google"></i> Google
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-amazon"></i> Amazon
+            </div>
+            <div class="brand-item">
+              <i class="fa-brands fa-shopify"></i> Shopify
+            </div>
           </div>
         </div>
       </div>
@@ -248,18 +504,43 @@
       <div class="container">
         <div class="newsletter-content">
           <div class="newsletter-text">
-            <h2 class="section-title light" style="text-align:left">Subscribe &amp; Get 15% Off</h2>
-            <p class="section-subtitle light" style="text-align:left;margin-bottom:20px">Join 50,000+ subscribers receiving weekly deals and exclusive offers.</p>
+            <h2 class="section-title light" style="text-align: left">
+              Subscribe &amp; Get 15% Off
+            </h2>
+            <p
+              class="section-subtitle light"
+              style="text-align: left; margin-bottom: 20px"
+            >
+              Join 50,000+ subscribers receiving weekly deals and exclusive
+              offers.
+            </p>
             <form class="newsletter-form" id="newsletterForm">
-              <input type="email" id="newsletterEmail" placeholder="Enter your email address" required autocomplete="email" />
-              <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email address"
+                required
+                autocomplete="email"
+              />
+              <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-paper-plane"></i> Subscribe
+              </button>
             </form>
-            <p class="newsletter-disclaimer"><i class="fa-solid fa-lock"></i> We respect your privacy. Unsubscribe at any time.</p>
+            <p class="newsletter-disclaimer">
+              <i class="fa-solid fa-lock"></i> We respect your privacy.
+              Unsubscribe at any time.
+            </p>
           </div>
           <div class="newsletter-features">
-            <div class="nl-feature"><i class="fa-solid fa-gift"></i><span>Exclusive offers</span></div>
-            <div class="nl-feature"><i class="fa-solid fa-bell"></i><span>New arrivals alerts</span></div>
-            <div class="nl-feature"><i class="fa-solid fa-tags"></i><span>Weekly deals</span></div>
+            <div class="nl-feature">
+              <i class="fa-solid fa-gift"></i><span>Exclusive offers</span>
+            </div>
+            <div class="nl-feature">
+              <i class="fa-solid fa-bell"></i><span>New arrivals alerts</span>
+            </div>
+            <div class="nl-feature">
+              <i class="fa-solid fa-tags"></i><span>Weekly deals</span>
+            </div>
           </div>
         </div>
       </div>
@@ -269,14 +550,82 @@
     <section class="faq-section" id="faq">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Find answers to the most common questions</p>
+        <p class="section-subtitle">
+          Find answers to the most common questions
+        </p>
         <div class="faq-list">
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How long does shipping take?</span><i class="fa-solid fa-chevron-down"></i></button><div class="faq-answer"><p>Standard shipping takes 5-7 business days. Express delivers within 2-3 days. Free shipping on orders over $50.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What is your return policy?</span><i class="fa-solid fa-chevron-down"></i></button><div class="faq-answer"><p>30-day money-back guarantee. Items must be in original condition. Contact support to initiate a return.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Are the products authentic?</span><i class="fa-solid fa-chevron-down"></i></button><div class="faq-answer"><p>Yes! 100% authentic products from authorized distributors. Every item has an authenticity guarantee.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What payment methods do you accept?</span><i class="fa-solid fa-chevron-down"></i></button><div class="faq-answer"><p>Visa, Mastercard, AMEX, PayPal, Apple Pay, Google Pay, and COD. All secured with 256-bit SSL.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How can I track my order?</span><i class="fa-solid fa-chevron-down"></i></button><div class="faq-answer"><p>You will receive a tracking email once shipped. Also check "Order History" in your account dashboard.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you offer international shipping?</span><i class="fa-solid fa-chevron-down"></i></button><div class="faq-answer"><p>Yes! We ship to 100+ countries. Rates vary by destination. Check our shipping calculator at checkout.</p></div></div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does shipping take?</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Standard shipping takes 5-7 business days. Express delivers
+                within 2-3 days. Free shipping on orders over $50.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is your return policy?</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                30-day money-back guarantee. Items must be in original
+                condition. Contact support to initiate a return.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are the products authentic?</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! 100% authentic products from authorized distributors. Every
+                item has an authenticity guarantee.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What payment methods do you accept?</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Visa, Mastercard, AMEX, PayPal, Apple Pay, Google Pay, and COD.
+                All secured with 256-bit SSL.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How can I track my order?</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                You will receive a tracking email once shipped. Also check
+                "Order History" in your account dashboard.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer international shipping?</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! We ship to 100+ countries. Rates vary by destination. Check
+                our shipping calculator at checkout.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -287,54 +636,168 @@
         <div class="footer-grid">
           <div class="footer-col footer-about">
             <h3><i class="fa-solid fa-cart-shopping"></i> SwiftCart</h3>
-            <p>Your one-stop destination for the best products at amazing prices. Shop smart, shop SwiftCart.</p>
-            <div class="footer-payment"><span>We accept:</span><div class="payment-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-apple-pay"></i><i class="fa-brands fa-google-pay"></i></div></div>
+            <p>
+              Your one-stop destination for the best products at amazing prices.
+              Shop smart, shop SwiftCart.
+            </p>
+            <div class="footer-payment">
+              <span>We accept:</span>
+              <div class="payment-icons">
+                <i class="fa-brands fa-cc-visa"></i
+                ><i class="fa-brands fa-cc-mastercard"></i
+                ><i class="fa-brands fa-cc-amex"></i
+                ><i class="fa-brands fa-cc-paypal"></i
+                ><i class="fa-brands fa-cc-apple-pay"></i
+                ><i class="fa-brands fa-google-pay"></i>
+              </div>
+            </div>
           </div>
-          <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="#home">Home</a></li><li><a href="#products">Products</a></li><li><a href="#deals">Flash Deals</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact</a></li></ul></div>
-          <div class="footer-col"><h3>Customer Service</h3><ul><li><a href="#faq">FAQ</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Track Order</a></li></ul></div>
-          <div class="footer-col"><h3>Contact Us</h3><ul class="contact-info"><li><i class="fa-solid fa-location-dot"></i> 123 Commerce St, Dhaka, BD</li><li><i class="fa-solid fa-phone"></i> +880 1234-567890</li><li><i class="fa-solid fa-envelope"></i> support@swiftcart.com</li><li><i class="fa-solid fa-clock"></i> Mon-Sat: 9AM - 10PM</li></ul>
-            <div class="social-links"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#deals">Flash Deals</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="fa-solid fa-location-dot"></i> 123 Commerce St, Dhaka,
+                BD
+              </li>
+              <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i> support@swiftcart.com
+              </li>
+              <li><i class="fa-solid fa-clock"></i> Mon-Sat: 9AM - 10PM</li>
+            </ul>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-twitter"></i></a
+              ><a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i></a
+              ><a href="#" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i></a
+              ><a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2026 SwiftCart. All Rights Reserved. | Designed with <i class="fa-solid fa-heart" style="color:var(--danger)"></i></p></div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 SwiftCart. All Rights Reserved. | Designed with
+            <i class="fa-solid fa-heart" style="color: var(--danger)"></i>
+          </p>
+        </div>
       </div>
     </footer>
 
     <!-- ========== PRODUCT DETAIL MODAL ========== -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal" id="productModal">
-        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          &times;
+        </button>
         <div class="modal-body">
           <div class="modal-image">
             <img id="modalImage" src="" alt="Product" />
-            <div class="modal-image-zoom" id="modalZoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            <div class="modal-image-zoom" id="modalZoom">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
           </div>
           <div class="modal-info">
-            <div class="modal-breadcrumb">Home &gt; Products &gt; <span id="modalCategoryBread"></span></div>
+            <div class="modal-breadcrumb">
+              Home &gt; Products &gt; <span id="modalCategoryBread"></span>
+            </div>
             <span class="modal-category" id="modalCategory"></span>
             <h2 id="modalTitle"></h2>
             <div class="modal-rating" id="modalRating"></div>
-            <p class="modal-price"><span class="modal-original-price" id="modalOriginalPrice"></span><span id="modalPrice"></span></p>
-            <p class="modal-stock" id="modalStock"><i class="fa-solid fa-circle-check"></i> In Stock</p>
+            <p class="modal-price">
+              <span class="modal-original-price" id="modalOriginalPrice"></span
+              ><span id="modalPrice"></span>
+            </p>
+            <p class="modal-stock" id="modalStock">
+              <i class="fa-solid fa-circle-check"></i> In Stock
+            </p>
             <p class="modal-description" id="modalDescription"></p>
-            <div class="modal-quantity"><label>Quantity:</label><div class="qty-selector"><button class="qty-btn" id="modalQtyMinus">−</button><span class="qty-value" id="modalQtyValue">1</span><button class="qty-btn" id="modalQtyPlus">+</button></div></div>
-            <div class="modal-actions">
-              <button class="btn-primary modal-cart-btn" id="modalCartBtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
-              <button class="btn-outline" id="modalWishlistBtn"><i class="fa-regular fa-heart"></i></button>
-              <button class="btn-outline" id="modalCompareBtn"><i class="fa-solid fa-code-compare"></i></button>
-              <button class="btn-outline" id="modalShareBtn"><i class="fa-solid fa-share-nodes"></i></button>
+            <div class="modal-quantity">
+              <label>Quantity:</label>
+              <div class="qty-selector">
+                <button class="qty-btn" id="modalQtyMinus">−</button
+                ><span class="qty-value" id="modalQtyValue">1</span
+                ><button class="qty-btn" id="modalQtyPlus">+</button>
+              </div>
             </div>
-            <div class="modal-guarantees"><div><i class="fa-solid fa-truck"></i> Free shipping over $50</div><div><i class="fa-solid fa-rotate-left"></i> 30-day returns</div><div><i class="fa-solid fa-shield-halved"></i> Secure checkout</div></div>
+            <div class="modal-actions">
+              <button class="btn-primary modal-cart-btn" id="modalCartBtn">
+                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+              </button>
+              <button class="btn-outline" id="modalWishlistBtn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="btn-outline" id="modalCompareBtn">
+                <i class="fa-solid fa-code-compare"></i>
+              </button>
+              <button class="btn-outline" id="modalShareBtn">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
+            <div class="modal-guarantees">
+              <div>
+                <i class="fa-solid fa-truck"></i> Free shipping over $50
+              </div>
+              <div><i class="fa-solid fa-rotate-left"></i> 30-day returns</div>
+              <div>
+                <i class="fa-solid fa-shield-halved"></i> Secure checkout
+              </div>
+            </div>
             <div class="modal-reviews-section">
               <h3>Customer Reviews <span id="modalReviewCount"></span></h3>
               <div class="reviews-list" id="modalReviews"></div>
-              <div class="add-review" id="addReviewSection" style="display:none">
+              <div
+                class="add-review"
+                id="addReviewSection"
+                style="display: none"
+              >
                 <h4>Write a Review</h4>
-                <div class="review-form-stars" id="reviewFormStars"><i class="fa-regular fa-star" data-rating="1"></i><i class="fa-regular fa-star" data-rating="2"></i><i class="fa-regular fa-star" data-rating="3"></i><i class="fa-regular fa-star" data-rating="4"></i><i class="fa-regular fa-star" data-rating="5"></i></div>
-                <textarea id="reviewText" placeholder="Share your experience..." maxlength="500" rows="3"></textarea>
-                <button class="btn-primary btn-sm" id="submitReviewBtn">Submit Review</button>
+                <div class="review-form-stars" id="reviewFormStars">
+                  <i class="fa-regular fa-star" data-rating="1"></i
+                  ><i class="fa-regular fa-star" data-rating="2"></i
+                  ><i class="fa-regular fa-star" data-rating="3"></i
+                  ><i class="fa-regular fa-star" data-rating="4"></i
+                  ><i class="fa-regular fa-star" data-rating="5"></i>
+                </div>
+                <textarea
+                  id="reviewText"
+                  placeholder="Share your experience..."
+                  maxlength="500"
+                  rows="3"
+                ></textarea>
+                <button class="btn-primary btn-sm" id="submitReviewBtn">
+                  Submit Review
+                </button>
               </div>
-              <button class="btn-outline btn-sm" id="toggleReviewForm">Write a Review</button>
+              <button class="btn-outline btn-sm" id="toggleReviewForm">
+                Write a Review
+              </button>
             </div>
           </div>
         </div>
@@ -344,20 +807,54 @@
     <!-- ========== CART SIDEBAR ========== -->
     <div class="cart-overlay" id="cartOverlay">
       <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header"><h2><i class="fa-solid fa-bag-shopping"></i> Your Cart</h2><button class="cart-close" id="cartClose">&times;</button></div>
-        <div class="cart-coupon"><input type="text" id="couponInput" placeholder="Enter coupon code" maxlength="20" /><button class="btn-sm btn-primary" id="applyCouponBtn">Apply</button></div>
+        <div class="cart-header">
+          <h2><i class="fa-solid fa-bag-shopping"></i> Your Cart</h2>
+          <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-coupon">
+          <input
+            type="text"
+            id="couponInput"
+            placeholder="Enter coupon code"
+            maxlength="20"
+          /><button class="btn-sm btn-primary" id="applyCouponBtn">
+            Apply
+          </button>
+        </div>
         <div class="coupon-message" id="couponMessage"></div>
         <div class="cart-items" id="cartItems"></div>
         <div class="cart-footer">
           <div class="cart-summary">
-            <div class="cart-summary-row"><span>Subtotal:</span><span id="cartSubtotal">$0.00</span></div>
-            <div class="cart-summary-row" id="discountRow" style="display:none"><span>Discount:</span><span id="cartDiscount" class="discount-amount">-$0.00</span></div>
-            <div class="cart-summary-row"><span>Shipping:</span><span id="cartShipping">$0.00</span></div>
-            <div class="cart-summary-row"><span>Tax (8%):</span><span id="cartTax">$0.00</span></div>
-            <div class="cart-summary-row total"><span>Total:</span><span id="cartTotal">$0.00</span></div>
+            <div class="cart-summary-row">
+              <span>Subtotal:</span><span id="cartSubtotal">$0.00</span>
+            </div>
+            <div
+              class="cart-summary-row"
+              id="discountRow"
+              style="display: none"
+            >
+              <span>Discount:</span
+              ><span id="cartDiscount" class="discount-amount">-$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+              <span>Shipping:</span><span id="cartShipping">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+              <span>Tax (8%):</span><span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-row total">
+              <span>Total:</span><span id="cartTotal">$0.00</span>
+            </div>
           </div>
-          <button class="btn-primary cart-checkout-btn" id="checkoutBtn"><i class="fa-solid fa-lock"></i> Proceed to Checkout</button>
-          <button class="btn-outline cart-continue-btn" id="continueShoppingBtn">Continue Shopping</button>
+          <button class="btn-primary cart-checkout-btn" id="checkoutBtn">
+            <i class="fa-solid fa-lock"></i> Proceed to Checkout
+          </button>
+          <button
+            class="btn-outline cart-continue-btn"
+            id="continueShoppingBtn"
+          >
+            Continue Shopping
+          </button>
         </div>
       </div>
     </div>
@@ -365,17 +862,33 @@
     <!-- ========== WISHLIST SIDEBAR ========== -->
     <div class="wishlist-overlay" id="wishlistOverlay">
       <div class="wishlist-sidebar">
-        <div class="cart-header"><h2><i class="fa-solid fa-heart"></i> Wishlist</h2><button class="cart-close" id="wishlistClose">&times;</button></div>
+        <div class="cart-header">
+          <h2><i class="fa-solid fa-heart"></i> Wishlist</h2>
+          <button class="cart-close" id="wishlistClose">&times;</button>
+        </div>
         <div class="cart-items" id="wishlistItems"></div>
-        <div class="cart-footer"><button class="btn-primary" id="addAllWishlistToCart" style="width:100%"><i class="fa-solid fa-cart-plus"></i> Add All to Cart</button></div>
+        <div class="cart-footer">
+          <button
+            class="btn-primary"
+            id="addAllWishlistToCart"
+            style="width: 100%"
+          >
+            <i class="fa-solid fa-cart-plus"></i> Add All to Cart
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- ========== COMPARE MODAL ========== -->
     <div class="compare-overlay" id="compareOverlay">
       <div class="compare-modal">
-        <div class="cart-header"><h2><i class="fa-solid fa-code-compare"></i> Compare Products</h2><button class="cart-close" id="compareClose">&times;</button></div>
-        <div class="compare-body" id="compareBody"><p class="compare-empty">Add products to compare.</p></div>
+        <div class="cart-header">
+          <h2><i class="fa-solid fa-code-compare"></i> Compare Products</h2>
+          <button class="cart-close" id="compareClose">&times;</button>
+        </div>
+        <div class="compare-body" id="compareBody">
+          <p class="compare-empty">Add products to compare.</p>
+        </div>
       </div>
     </div>
 
@@ -384,45 +897,232 @@
       <div class="checkout-modal">
         <button class="modal-close" id="checkoutClose">&times;</button>
         <div class="checkout-progress">
-          <div class="progress-step active" data-step="1"><span>1</span> Shipping</div>
+          <div class="progress-step active" data-step="1">
+            <span>1</span> Shipping
+          </div>
           <div class="progress-step" data-step="2"><span>2</span> Payment</div>
           <div class="progress-step" data-step="3"><span>3</span> Review</div>
         </div>
         <div class="checkout-step active" id="checkoutStep1">
           <h3>Shipping Information</h3>
           <form class="checkout-form" id="shippingForm">
-            <div class="form-row"><div class="form-group"><label for="shipFirstName">First Name *</label><input type="text" id="shipFirstName" required minlength="2" maxlength="50" /></div><div class="form-group"><label for="shipLastName">Last Name *</label><input type="text" id="shipLastName" required minlength="2" maxlength="50" /></div></div>
-            <div class="form-group"><label for="shipEmail">Email *</label><input type="email" id="shipEmail" required maxlength="100" /></div>
-            <div class="form-group"><label for="shipPhone">Phone *</label><input type="tel" id="shipPhone" required pattern="[\+]?[0-9\s\-]{7,15}" /></div>
-            <div class="form-group"><label for="shipAddress">Address *</label><input type="text" id="shipAddress" required minlength="5" maxlength="200" /></div>
-            <div class="form-row"><div class="form-group"><label for="shipCity">City *</label><input type="text" id="shipCity" required maxlength="50" /></div><div class="form-group"><label for="shipZip">ZIP Code *</label><input type="text" id="shipZip" required pattern="[0-9]{4,10}" /></div></div>
-            <div class="form-group"><label for="shipCountry">Country *</label><select id="shipCountry" required><option value="">Select Country</option><option value="BD">Bangladesh</option><option value="US">United States</option><option value="UK">United Kingdom</option><option value="CA">Canada</option><option value="AU">Australia</option><option value="IN">India</option><option value="DE">Germany</option><option value="FR">France</option><option value="JP">Japan</option></select></div>
-            <div class="form-group"><label>Shipping Method</label><div class="radio-group"><label class="radio-label"><input type="radio" name="shippingMethod" value="standard" checked /> Standard (5-7 days) — Free over $50</label><label class="radio-label"><input type="radio" name="shippingMethod" value="express" /> Express (2-3 days) — $9.99</label><label class="radio-label"><input type="radio" name="shippingMethod" value="overnight" /> Overnight — $19.99</label></div></div>
-            <button type="submit" class="btn-primary" style="width:100%">Continue to Payment <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="shipFirstName">First Name *</label
+                ><input
+                  type="text"
+                  id="shipFirstName"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                />
+              </div>
+              <div class="form-group">
+                <label for="shipLastName">Last Name *</label
+                ><input
+                  type="text"
+                  id="shipLastName"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="shipEmail">Email *</label
+              ><input type="email" id="shipEmail" required maxlength="100" />
+            </div>
+            <div class="form-group">
+              <label for="shipPhone">Phone *</label
+              ><input
+                type="tel"
+                id="shipPhone"
+                required
+                pattern="[\+]?[0-9\s\-]{7,15}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="shipAddress">Address *</label
+              ><input
+                type="text"
+                id="shipAddress"
+                required
+                minlength="5"
+                maxlength="200"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="shipCity">City *</label
+                ><input type="text" id="shipCity" required maxlength="50" />
+              </div>
+              <div class="form-group">
+                <label for="shipZip">ZIP Code *</label
+                ><input
+                  type="text"
+                  id="shipZip"
+                  required
+                  pattern="[0-9]{4,10}"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="shipCountry">Country *</label
+              ><select id="shipCountry" required>
+                <option value="">Select Country</option>
+                <option value="BD">Bangladesh</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="IN">India</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="JP">Japan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Shipping Method</label>
+              <div class="radio-group">
+                <label class="radio-label"
+                  ><input
+                    type="radio"
+                    name="shippingMethod"
+                    value="standard"
+                    checked
+                  />
+                  Standard (5-7 days) — Free over $50</label
+                ><label class="radio-label"
+                  ><input type="radio" name="shippingMethod" value="express" />
+                  Express (2-3 days) — $9.99</label
+                ><label class="radio-label"
+                  ><input
+                    type="radio"
+                    name="shippingMethod"
+                    value="overnight"
+                  />
+                  Overnight — $19.99</label
+                >
+              </div>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%">
+              Continue to Payment <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </form>
         </div>
         <div class="checkout-step" id="checkoutStep2">
           <h3>Payment Information</h3>
           <form class="checkout-form" id="paymentForm">
-            <div class="payment-methods"><label class="payment-method active"><input type="radio" name="paymentMethod" value="card" checked /><i class="fa-solid fa-credit-card"></i> Card</label><label class="payment-method"><input type="radio" name="paymentMethod" value="paypal" /><i class="fa-brands fa-paypal"></i> PayPal</label><label class="payment-method"><input type="radio" name="paymentMethod" value="cod" /><i class="fa-solid fa-money-bill-wave"></i> COD</label></div>
-            <div id="cardPaymentFields">
-              <div class="form-group"><label for="cardNumber">Card Number *</label><div class="card-input-wrapper"><input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required maxlength="19" autocomplete="cc-number" /><i class="fa-solid fa-credit-card card-icon"></i></div></div>
-              <div class="form-row"><div class="form-group"><label for="cardExpiry">Expiry *</label><input type="text" id="cardExpiry" placeholder="MM/YY" required maxlength="5" /></div><div class="form-group"><label for="cardCVV">CVV *</label><input type="password" id="cardCVV" placeholder="***" required maxlength="4" minlength="3" /></div></div>
-              <div class="form-group"><label for="cardName">Cardholder Name *</label><input type="text" id="cardName" required maxlength="100" /></div>
+            <div class="payment-methods">
+              <label class="payment-method active"
+                ><input
+                  type="radio"
+                  name="paymentMethod"
+                  value="card"
+                  checked
+                /><i class="fa-solid fa-credit-card"></i> Card</label
+              ><label class="payment-method"
+                ><input type="radio" name="paymentMethod" value="paypal" /><i
+                  class="fa-brands fa-paypal"
+                ></i>
+                PayPal</label
+              ><label class="payment-method"
+                ><input type="radio" name="paymentMethod" value="cod" /><i
+                  class="fa-solid fa-money-bill-wave"
+                ></i>
+                COD</label
+              >
             </div>
-            <div class="secure-badge"><i class="fa-solid fa-shield-halved"></i> Secured with 256-bit SSL encryption</div>
-            <div class="checkout-nav"><button type="button" class="btn-outline" id="backToShipping"><i class="fa-solid fa-arrow-left"></i> Back</button><button type="submit" class="btn-primary">Review Order <i class="fa-solid fa-arrow-right"></i></button></div>
+            <div id="cardPaymentFields">
+              <div class="form-group">
+                <label for="cardNumber">Card Number *</label>
+                <div class="card-input-wrapper">
+                  <input
+                    type="text"
+                    id="cardNumber"
+                    placeholder="1234 5678 9012 3456"
+                    required
+                    maxlength="19"
+                    autocomplete="cc-number"
+                  /><i class="fa-solid fa-credit-card card-icon"></i>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cardExpiry">Expiry *</label
+                  ><input
+                    type="text"
+                    id="cardExpiry"
+                    placeholder="MM/YY"
+                    required
+                    maxlength="5"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cardCVV">CVV *</label
+                  ><input
+                    type="password"
+                    id="cardCVV"
+                    placeholder="***"
+                    required
+                    maxlength="4"
+                    minlength="3"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cardName">Cardholder Name *</label
+                ><input type="text" id="cardName" required maxlength="100" />
+              </div>
+            </div>
+            <div class="secure-badge">
+              <i class="fa-solid fa-shield-halved"></i> Secured with 256-bit SSL
+              encryption
+            </div>
+            <div class="checkout-nav">
+              <button type="button" class="btn-outline" id="backToShipping">
+                <i class="fa-solid fa-arrow-left"></i> Back</button
+              ><button type="submit" class="btn-primary">
+                Review Order <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
           </form>
         </div>
         <div class="checkout-step" id="checkoutStep3">
           <h3>Order Review</h3>
           <div class="order-review">
-            <div class="review-section"><h4><i class="fa-solid fa-truck"></i> Shipping</h4><div id="reviewShipping"></div></div>
-            <div class="review-section"><h4><i class="fa-solid fa-credit-card"></i> Payment</h4><div id="reviewPayment"></div></div>
-            <div class="review-section"><h4><i class="fa-solid fa-box"></i> Items (<span id="reviewItemCount">0</span>)</h4><div id="reviewItems"></div></div>
-            <div class="review-section order-total-review"><div id="reviewTotals"></div></div>
+            <div class="review-section">
+              <h4><i class="fa-solid fa-truck"></i> Shipping</h4>
+              <div id="reviewShipping"></div>
+            </div>
+            <div class="review-section">
+              <h4><i class="fa-solid fa-credit-card"></i> Payment</h4>
+              <div id="reviewPayment"></div>
+            </div>
+            <div class="review-section">
+              <h4>
+                <i class="fa-solid fa-box"></i> Items (<span
+                  id="reviewItemCount"
+                  >0</span
+                >)
+              </h4>
+              <div id="reviewItems"></div>
+            </div>
+            <div class="review-section order-total-review">
+              <div id="reviewTotals"></div>
+            </div>
           </div>
-          <div class="checkout-nav"><button type="button" class="btn-outline" id="backToPayment"><i class="fa-solid fa-arrow-left"></i> Back</button><button type="button" class="btn-primary btn-lg" id="placeOrderBtn"><i class="fa-solid fa-lock"></i> Place Order</button></div>
+          <div class="checkout-nav">
+            <button type="button" class="btn-outline" id="backToPayment">
+              <i class="fa-solid fa-arrow-left"></i> Back</button
+            ><button
+              type="button"
+              class="btn-primary btn-lg"
+              id="placeOrderBtn"
+            >
+              <i class="fa-solid fa-lock"></i> Place Order
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -434,8 +1134,15 @@
         <h2>Order Placed Successfully!</h2>
         <p>Your order number is:</p>
         <div class="order-number" id="orderNumber">#SW-000000</div>
-        <p class="success-sub">A confirmation email has been sent. Track your order in Order History.</p>
-        <div class="success-actions"><button class="btn-primary" id="viewOrderBtn">View Orders</button><button class="btn-outline" id="continueShopping2">Continue Shopping</button></div>
+        <p class="success-sub">
+          A confirmation email has been sent. Track your order in Order History.
+        </p>
+        <div class="success-actions">
+          <button class="btn-primary" id="viewOrderBtn">View Orders</button
+          ><button class="btn-outline" id="continueShopping2">
+            Continue Shopping
+          </button>
+        </div>
       </div>
     </div>
 
@@ -452,32 +1159,139 @@
     <div class="auth-overlay" id="authOverlay">
       <div class="auth-modal">
         <button class="modal-close" id="authClose">&times;</button>
-        <div class="auth-tabs"><button class="auth-tab active" data-tab="login">Login</button><button class="auth-tab" data-tab="register">Register</button></div>
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Login</button
+          ><button class="auth-tab" data-tab="register">Register</button>
+        </div>
         <form class="auth-form" id="loginForm">
           <h3>Welcome Back!</h3>
-          <div class="form-group"><label for="loginEmail">Email</label><input type="email" id="loginEmail" required autocomplete="email" /></div>
-          <div class="form-group"><label for="loginPassword">Password</label><div class="password-wrapper"><input type="password" id="loginPassword" required minlength="6" autocomplete="current-password" /><button type="button" class="password-toggle"><i class="fa-solid fa-eye"></i></button></div></div>
-          <div class="form-options"><label class="checkbox-label"><input type="checkbox" id="rememberMe" /> Remember me</label><a href="#" class="forgot-link">Forgot password?</a></div>
-          <button type="submit" class="btn-primary" style="width:100%">Login <i class="fa-solid fa-right-to-bracket"></i></button>
+          <div class="form-group">
+            <label for="loginEmail">Email</label
+            ><input
+              type="email"
+              id="loginEmail"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="loginPassword"
+                required
+                minlength="6"
+                autocomplete="current-password"
+              /><button type="button" class="password-toggle">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label"
+              ><input type="checkbox" id="rememberMe" /> Remember me</label
+            ><a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%">
+            Login <i class="fa-solid fa-right-to-bracket"></i>
+          </button>
           <div class="auth-divider"><span>OR</span></div>
-          <button type="button" class="btn-social google"><i class="fa-brands fa-google"></i> Continue with Google</button>
-          <button type="button" class="btn-social facebook"><i class="fa-brands fa-facebook-f"></i> Continue with Facebook</button>
+          <button type="button" class="btn-social google">
+            <i class="fa-brands fa-google"></i> Continue with Google
+          </button>
+          <button type="button" class="btn-social facebook">
+            <i class="fa-brands fa-facebook-f"></i> Continue with Facebook
+          </button>
         </form>
-        <form class="auth-form" id="registerForm" style="display:none">
+        <form class="auth-form" id="registerForm" style="display: none">
           <h3>Create Account</h3>
-          <div class="form-row"><div class="form-group"><label for="regFirstName">First Name</label><input type="text" id="regFirstName" required minlength="2" maxlength="50" /></div><div class="form-group"><label for="regLastName">Last Name</label><input type="text" id="regLastName" required minlength="2" maxlength="50" /></div></div>
-          <div class="form-group"><label for="regEmail">Email</label><input type="email" id="regEmail" required maxlength="100" autocomplete="email" /></div>
-          <div class="form-group"><label for="regPassword">Password</label><div class="password-wrapper"><input type="password" id="regPassword" required minlength="8" maxlength="50" autocomplete="new-password" /><button type="button" class="password-toggle"><i class="fa-solid fa-eye"></i></button></div><div class="password-strength" id="passwordStrength"></div></div>
-          <div class="form-group"><label for="regConfirmPassword">Confirm Password</label><input type="password" id="regConfirmPassword" required minlength="8" autocomplete="new-password" /></div>
-          <label class="checkbox-label"><input type="checkbox" id="agreeTerms" required /> I agree to the <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a></label>
-          <button type="submit" class="btn-primary" style="width:100%;margin-top:10px">Create Account <i class="fa-solid fa-user-plus"></i></button>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="regFirstName">First Name</label
+              ><input
+                type="text"
+                id="regFirstName"
+                required
+                minlength="2"
+                maxlength="50"
+              />
+            </div>
+            <div class="form-group">
+              <label for="regLastName">Last Name</label
+              ><input
+                type="text"
+                id="regLastName"
+                required
+                minlength="2"
+                maxlength="50"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email</label
+            ><input
+              type="email"
+              id="regEmail"
+              required
+              maxlength="100"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="regPassword"
+                required
+                minlength="8"
+                maxlength="50"
+                autocomplete="new-password"
+              /><button type="button" class="password-toggle">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div class="password-strength" id="passwordStrength"></div>
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Confirm Password</label
+            ><input
+              type="password"
+              id="regConfirmPassword"
+              required
+              minlength="8"
+              autocomplete="new-password"
+            />
+          </div>
+          <label class="checkbox-label"
+            ><input type="checkbox" id="agreeTerms" required /> I agree to the
+            <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a></label
+          >
+          <button
+            type="submit"
+            class="btn-primary"
+            style="width: 100%; margin-top: 10px"
+          >
+            Create Account <i class="fa-solid fa-user-plus"></i>
+          </button>
         </form>
-        <div class="user-profile" id="userProfile" style="display:none">
-          <div class="profile-header"><div class="profile-avatar" id="profileAvatar">U</div><h3 id="profileName">User</h3><p id="profileEmail">user@email.com</p></div>
+        <div class="user-profile" id="userProfile" style="display: none">
+          <div class="profile-header">
+            <div class="profile-avatar" id="profileAvatar">U</div>
+            <h3 id="profileName">User</h3>
+            <p id="profileEmail">user@email.com</p>
+          </div>
           <div class="profile-menu">
-            <button class="profile-menu-item" id="viewOrdersBtn"><i class="fa-solid fa-clock-rotate-left"></i> Order History</button>
-            <button class="profile-menu-item" id="viewWishlistBtn"><i class="fa-solid fa-heart"></i> My Wishlist</button>
-            <button class="profile-menu-item logout" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            <button class="profile-menu-item" id="viewOrdersBtn">
+              <i class="fa-solid fa-clock-rotate-left"></i> Order History
+            </button>
+            <button class="profile-menu-item" id="viewWishlistBtn">
+              <i class="fa-solid fa-heart"></i> My Wishlist
+            </button>
+            <button class="profile-menu-item logout" id="logoutBtn">
+              <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
           </div>
         </div>
       </div>
@@ -493,13 +1307,25 @@
     <div class="toast-container" id="toastContainer"></div>
 
     <!-- ========== SCROLL TO TOP ========== -->
-    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- ========== COOKIE CONSENT ========== -->
-    <div class="cookie-banner" id="cookieBanner" style="display:none">
+    <div class="cookie-banner" id="cookieBanner" style="display: none">
       <div class="cookie-content">
-        <p><i class="fa-solid fa-cookie-bite"></i> We use cookies to enhance your experience. By continuing, you agree to our <a href="#">Cookie Policy</a>.</p>
-        <div class="cookie-actions"><button class="btn-primary btn-sm" id="acceptCookies">Accept All</button><button class="btn-outline btn-sm" id="declineCookies">Decline</button></div>
+        <p>
+          <i class="fa-solid fa-cookie-bite"></i> We use cookies to enhance your
+          experience. By continuing, you agree to our
+          <a href="#">Cookie Policy</a>.
+        </p>
+        <div class="cookie-actions">
+          <button class="btn-primary btn-sm" id="acceptCookies">
+            Accept All</button
+          ><button class="btn-outline btn-sm" id="declineCookies">
+            Decline
+          </button>
+        </div>
       </div>
     </div>
 
