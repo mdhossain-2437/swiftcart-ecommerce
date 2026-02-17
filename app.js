@@ -11,7 +11,6 @@ const spinner = document.getElementById("spinner");
 const cartCount = document.getElementById("cartCount");
 const cartIcon = document.getElementById("cartIcon");
 const cartOverlay = document.getElementById("cartOverlay");
-const cartSidebar = document.getElementById("cartSidebar");
 const cartClose = document.getElementById("cartClose");
 const cartItems = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
@@ -20,9 +19,30 @@ const modalClose = document.getElementById("modalClose");
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const navMenu = document.getElementById("navMenu");
 const newsletterForm = document.getElementById("newsletterForm");
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+const toastContainer = document.getElementById("toastContainer");
 
 // ========== API BASE URL ==========
 const BASE_URL = "https://fakestoreapi.com";
+
+// ========== TOAST NOTIFICATION SYSTEM ==========
+function showToast(message, type = "success") {
+  const icons = {
+    success: "fa-circle-check",
+    error: "fa-circle-xmark",
+    info: "fa-circle-info",
+  };
+
+  const toast = document.createElement("div");
+  toast.className = `toast toast-${type}`;
+  toast.innerHTML = `<i class="fa-solid ${icons[type]}"></i><span>${message}</span>`;
+  toastContainer.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("toast-exit");
+    toast.addEventListener("animationend", () => toast.remove());
+  }, 2500);
+}
 
 // ========== UTILITY FUNCTIONS ==========
 
@@ -76,6 +96,7 @@ async function fetchAllProducts() {
   try {
     showSpinner();
     const response = await fetch(`${BASE_URL}/products`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     allProducts = data;
     hideSpinner();
@@ -84,7 +105,8 @@ async function fetchAllProducts() {
     console.error("Error fetching products:", error);
     hideSpinner();
     productsGrid.innerHTML =
-      '<p style="text-align:center;color:#dc3545;grid-column:1/-1;">Failed to load products. Please try again later.</p>';
+      '<p style="text-align:center;color:#dc3545;grid-column:1/-1;padding:40px 0;"><i class="fa-solid fa-triangle-exclamation" style="font-size:2rem;display:block;margin-bottom:10px;"></i>Failed to load products. Please try again later.</p>';
+    showToast("Failed to load products", "error");
   }
 }
 
@@ -93,6 +115,7 @@ async function fetchProductsByCategory(category) {
   try {
     showSpinner();
     const response = await fetch(`${BASE_URL}/products/category/${category}`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     hideSpinner();
     return data;
@@ -100,7 +123,8 @@ async function fetchProductsByCategory(category) {
     console.error("Error fetching category products:", error);
     hideSpinner();
     productsGrid.innerHTML =
-      '<p style="text-align:center;color:#dc3545;grid-column:1/-1;">Failed to load products. Please try again later.</p>';
+      '<p style="text-align:center;color:#dc3545;grid-column:1/-1;padding:40px 0;">Failed to load products. Please try again later.</p>';
+    showToast("Failed to load category products", "error");
   }
 }
 
@@ -108,10 +132,12 @@ async function fetchProductsByCategory(category) {
 async function fetchCategories() {
   try {
     const response = await fetch(`${BASE_URL}/products/categories`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     return data;
   } catch (error) {
     console.error("Error fetching categories:", error);
+    showToast("Failed to load categories", "error");
   }
 }
 
@@ -119,40 +145,43 @@ async function fetchCategories() {
 async function fetchProduct(id) {
   try {
     const response = await fetch(`${BASE_URL}/products/${id}`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     return data;
   } catch (error) {
     console.error("Error fetching product:", error);
+    showToast("Failed to load product details", "error");
   }
 }
 
 // ========== RENDER FUNCTIONS ==========
 
 // Create product card HTML
-function createProductCard(product) {
+function createProductCard(product, index = 0) {
   const card = document.createElement("div");
-  card.classList.add("product-card");
+  card.classList.add("product-card", "animate-in");
+  card.style.animationDelay = `${index * 0.08}s`;
 
   card.innerHTML = `
-        <div class="product-image">
-            <img src="${product.image}" alt="${product.title}" loading="lazy">
-        </div>
-        <div class="product-info">
-            <span class="product-category">${product.category}</span>
-            <h3 class="product-title" title="${product.title}">${truncateText(product.title)}</h3>
-            <div class="product-rating">
-                <span class="stars">${generateStars(product.rating.rate)}</span>
-                <span class="rating-text">(${product.rating.rate} / ${product.rating.count} reviews)</span>
-            </div>
-            <p class="product-price">$${product.price.toFixed(2)}</p>
-            <div class="product-actions">
-                <button class="btn-details" onclick="openModal(${product.id})">Details</button>
-                <button class="btn-add-cart" onclick="addToCart(${product.id})">
-                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                </button>
-            </div>
-        </div>
-    `;
+    <div class="product-image">
+      <img src="${product.image}" alt="${product.title}" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-category">${product.category}</span>
+      <h3 class="product-title" title="${product.title}">${truncateText(product.title)}</h3>
+      <div class="product-rating">
+        <span class="stars">${generateStars(product.rating.rate)}</span>
+        <span class="rating-text">(${product.rating.rate} / ${product.rating.count} reviews)</span>
+      </div>
+      <p class="product-price">$${product.price.toFixed(2)}</p>
+      <div class="product-actions">
+        <button class="btn-details" onclick="openModal(${product.id})" aria-label="View details for ${truncateText(product.title, 30)}">Details</button>
+        <button class="btn-add-cart" onclick="addToCart(${product.id}, event)" aria-label="Add ${truncateText(product.title, 30)} to cart">
+          <i class="fa-solid fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  `;
 
   return card;
 }
@@ -163,26 +192,25 @@ function renderProducts(products) {
 
   if (!products || products.length === 0) {
     productsGrid.innerHTML =
-      '<p style="text-align:center;color:var(--gray);grid-column:1/-1;">No products found.</p>';
+      '<p style="text-align:center;color:var(--gray);grid-column:1/-1;padding:40px 0;">No products found.</p>';
     return;
   }
 
-  products.forEach((product) => {
-    const card = createProductCard(product);
+  products.forEach((product, index) => {
+    const card = createProductCard(product, index);
     productsGrid.appendChild(card);
   });
 }
 
 // Render trending / top rated products
 function renderTrendingProducts(products) {
-  // Sort by rating and pick top 3
   const topRated = [...products]
     .sort((a, b) => b.rating.rate - a.rating.rate)
     .slice(0, 3);
 
   trendingProducts.innerHTML = "";
-  topRated.forEach((product) => {
-    const card = createProductCard(product);
+  topRated.forEach((product, index) => {
+    const card = createProductCard(product, index);
     trendingProducts.appendChild(card);
   });
 }
@@ -194,7 +222,6 @@ function renderCategories(categories) {
     btn.classList.add("category-btn");
     btn.dataset.category = category;
     btn.textContent = category;
-
     btn.addEventListener("click", () => handleCategoryClick(category, btn));
     categoryContainer.appendChild(btn);
   });
@@ -245,15 +272,16 @@ async function openModal(productId) {
   document.getElementById("modalTitle").textContent = product.title;
   document.getElementById("modalDescription").textContent = product.description;
   document.getElementById("modalRating").innerHTML = `
-        ${generateStars(product.rating.rate)}
-        <span class="rating-number">${product.rating.rate} out of 5 (${product.rating.count} reviews)</span>
-    `;
+    ${generateStars(product.rating.rate)}
+    <span class="rating-number">${product.rating.rate} out of 5 (${product.rating.count} reviews)</span>
+  `;
   document.getElementById("modalPrice").textContent =
     `$${product.price.toFixed(2)}`;
 
   // Set up modal cart button
-  document.getElementById("modalCartBtn").onclick = () => {
-    addToCart(product.id);
+  const modalCartBtn = document.getElementById("modalCartBtn");
+  modalCartBtn.onclick = (e) => {
+    addToCart(product.id, e);
     closeModal();
   };
 
@@ -273,7 +301,7 @@ modalOverlay.addEventListener("click", (e) => {
 
 // ========== CART FUNCTIONS ==========
 
-function addToCart(productId) {
+function addToCart(productId, e) {
   const product = allProducts.find((p) => p.id === productId);
   if (!product) return;
 
@@ -293,41 +321,65 @@ function addToCart(productId) {
 
   saveCart();
   updateCartUI();
+  showToast(`${truncateText(product.title, 25)} added to cart!`, "success");
 
-  // Brief visual feedback
-  const btn =
-    event.target.closest(".btn-add-cart") ||
-    event.target.closest(".modal-cart-btn");
-  if (btn) {
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Added!';
-    btn.style.background = "#28a745";
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = "";
-    }, 1000);
+  // Brief visual feedback on the button
+  if (e && e.target) {
+    const btn =
+      e.target.closest(".btn-add-cart") || e.target.closest(".modal-cart-btn");
+    if (btn) {
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Added!';
+      btn.style.background = "#28a745";
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = "";
+      }, 1000);
+    }
   }
 }
 
 function removeFromCart(productId) {
+  const item = cart.find((item) => item.id === productId);
   cart = cart.filter((item) => item.id !== productId);
+  saveCart();
+  updateCartUI();
+  if (item) {
+    showToast(`${truncateText(item.title, 25)} removed from cart`, "info");
+  }
+}
+
+function updateQuantity(productId, delta) {
+  const item = cart.find((item) => item.id === productId);
+  if (!item) return;
+
+  item.quantity += delta;
+  if (item.quantity <= 0) {
+    removeFromCart(productId);
+    return;
+  }
+
   saveCart();
   updateCartUI();
 }
 
 function updateCartUI() {
-  // Update cart count
+  // Update cart count badge
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   cartCount.textContent = totalItems;
+
+  // Animate badge when items change
+  cartCount.style.transform = "scale(1.3)";
+  setTimeout(() => (cartCount.style.transform = "scale(1)"), 200);
 
   // Update cart items
   if (cart.length === 0) {
     cartItems.innerHTML = `
-            <div class="cart-empty">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <p>Your cart is empty</p>
-            </div>
-        `;
+      <div class="cart-empty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <p>Your cart is empty</p>
+      </div>
+    `;
     cartTotal.textContent = "$0.00";
     return;
   }
@@ -341,15 +393,20 @@ function updateCartUI() {
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
     cartItem.innerHTML = `
-            <img src="${item.image}" alt="${item.title}">
-            <div class="cart-item-info">
-                <h4>${truncateText(item.title, 30)}</h4>
-                <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)} ${item.quantity > 1 ? `(x${item.quantity})` : ""}</span>
-            </div>
-            <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remove">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        `;
+      <img src="${item.image}" alt="${item.title}">
+      <div class="cart-item-info">
+        <h4>${truncateText(item.title, 30)}</h4>
+        <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)" aria-label="Decrease quantity">−</button>
+          <span class="qty-value">${item.quantity}</span>
+          <button class="qty-btn" onclick="updateQuantity(${item.id}, +1)" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+      <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remove item" aria-label="Remove ${truncateText(item.title, 20)} from cart">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    `;
     cartItems.appendChild(cartItem);
   });
 
@@ -357,98 +414,137 @@ function updateCartUI() {
 }
 
 // Cart sidebar toggle
-cartIcon.addEventListener("click", () => {
+function openCart() {
   cartOverlay.classList.add("show");
   document.body.style.overflow = "hidden";
-});
+}
 
-cartClose.addEventListener("click", () => {
+function closeCart() {
   cartOverlay.classList.remove("show");
   document.body.style.overflow = "";
+}
+
+cartIcon.addEventListener("click", openCart);
+cartIcon.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    openCart();
+  }
 });
 
+cartClose.addEventListener("click", closeCart);
+
 cartOverlay.addEventListener("click", (e) => {
-  if (e.target === cartOverlay) {
-    cartOverlay.classList.remove("show");
-    document.body.style.overflow = "";
-  }
+  if (e.target === cartOverlay) closeCart();
 });
 
 // ========== MOBILE MENU ==========
 mobileMenuBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
+  const isOpen = navMenu.classList.toggle("show");
+  mobileMenuBtn.setAttribute("aria-expanded", isOpen);
+  mobileMenuBtn.querySelector("i").className = isOpen
+    ? "fa-solid fa-xmark"
+    : "fa-solid fa-bars";
 });
 
 // Close mobile menu on link click
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("show");
+    mobileMenuBtn.setAttribute("aria-expanded", "false");
+    mobileMenuBtn.querySelector("i").className = "fa-solid fa-bars";
   });
 });
 
 // ========== NEWSLETTER ==========
 newsletterForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const email = newsletterForm.querySelector("input").value;
-  alert(`Thank you for subscribing with ${email}!`);
-  newsletterForm.reset();
+  const emailInput = newsletterForm.querySelector("input");
+  const email = emailInput.value.trim();
+
+  if (email) {
+    showToast(`Thank you for subscribing with ${email}!`, "success");
+    newsletterForm.reset();
+  }
 });
 
-// ========== NAVBAR SCROLL EFFECT ==========
+// ========== SCROLL EFFECTS ==========
+let lastScroll = 0;
+const navbar = document.getElementById("navbar");
+
 window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) {
-    navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.15)";
+  const scrollY = window.scrollY;
+
+  // Navbar scroll effect
+  if (scrollY > 50) {
+    navbar.classList.add("scrolled");
   } else {
-    navbar.style.boxShadow = "0 2px 15px rgba(0,0,0,0.1)";
+    navbar.classList.remove("scrolled");
   }
+
+  // Scroll to top button
+  if (scrollY > 500) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+
+  lastScroll = scrollY;
+});
+
+// Scroll to top
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // ========== ACTIVE NAV LINK ON SCROLL ==========
 const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll", () => {
+
+function updateActiveNav() {
   const scrollY = window.pageYOffset;
   sections.forEach((section) => {
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 120;
     const sectionId = section.getAttribute("id");
     const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
 
     if (navLink) {
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
         navLink.classList.add("active");
-      } else {
-        navLink.classList.remove("active");
       }
     }
   });
-});
+}
+
+window.addEventListener("scroll", updateActiveNav);
 
 // ========== KEYBOARD SUPPORT ==========
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
-    cartOverlay.classList.remove("show");
-    document.body.style.overflow = "";
+    closeCart();
   }
 });
 
 // ========== INITIALIZE APP ==========
 async function init() {
-  // Load categories
-  const categories = await fetchCategories();
+  // Load categories and products in parallel for faster load
+  const [categories, products] = await Promise.all([
+    fetchCategories(),
+    fetchAllProducts(),
+  ]);
+
   if (categories) {
     renderCategories(categories);
   }
 
-  // Load all products
-  const products = await fetchAllProducts();
   if (products) {
     renderProducts(products);
     renderTrendingProducts(products);
   }
 
-  // Initialize cart UI
+  // Initialize cart UI from localStorage
   updateCartUI();
 }
 
